@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Noto+Sans+Arabic&display=swap');
 
 body {
-    background: #154d80;
+    /* background: #154d80; */
     color: #000000;
     font-family: 'Cairo';
     font-weight: 400;
 }
 
 .container {
-    border: 15px solid #aec1d2;
+    /* border: 15px solid #aec1d2; */
 }
 
 .container .sectiontitle h2 {
@@ -199,9 +199,13 @@ label:hover .tooltip2 {
 }
 
 .btn-secondary {
-    color: #000000;
+    color: #000000 !important;
     background-color: #E9E9E9;
     border-color: #3C969C;
+}
+
+.btn-secondary:hover {
+    background-color: #d9d8d8;
 }
 
 @media (min-width: 1400px) {
