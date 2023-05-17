@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إحتساب الضمان</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <script type="text/javascript">
+        // function showone() {
+        //     document.getElementById("show1").style.display = "block";
+        //     document.getElementById("show2").style.display = "none";
+        // }
+
+        function handleRadioChange() {
+            var radios = document.getElementsByName("flexRadioDefault");
+
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    console.log("Selected radio value: " + radios[i].id);
+
+                    if (radios[i].id == "flexRadioDefault1") {
+                        document.getElementById("show1").style.display = "block";
+                        document.getElementById("show2").style.display = "none";
+                        document.getElementById("show3").style.display = "none";
+
+                    }
+                    else if (radios[i].id == "flexRadioDefault2") {
+                        document.getElementById("show2").style.display = "block";
+                        document.getElementById("show1").style.display = "none";
+                        document.getElementById("show3").style.display = "none";
+
+
+                    }
+                    else {
+                        document.getElementById("show2").style.display = "none";
+                        document.getElementById("show1").style.display = "none";
+                        document.getElementById("show3").style.display = "block";
+
+                    }
+                    break; // Exit the loop when a selected radio is found
+
+
+
+                }
+            }
+        }
+
+
+        function ChangeState() {
+            var owner = document.getElementById('owner')
+            if (owner.value == "2") {
+                document.getElementById('numbersubscribersaccount').style.display = "flex"
+
+            }
+            else {
+                document.getElementById('numbersubscribersaccount').style.display = "none"
+            }
+        }
+
+        function ChangeState2() {
+            var company = document.getElementById('company')
+
+            if (company.value == "1") {
+                document.getElementById('showsection2').style.display = "block"
+                document.getElementById('showsection1').style.display = "none"
+
+
+            }
+            else if (company.value == "2") {
+                document.getElementById('showsection1').style.display = "block"
+                document.getElementById('showsection2').style.display = "none"
+
+
+            }
+            else {
+                document.getElementById('showsection2').style.display = "none"
+                document.getElementById('showsection1').style.display = "none"
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+    <div>
+        <div class="container ">
+            <div class="row bg-white">
+                <div class="col-12" style="    padding: 19px 19px;">
+                    <div class="sectiontitle">
+                        <h2>طريقة الاحتساب</h2>
+                        <p>تتيح هذه النافذة إمكانية احتساب الودائع المؤمن عليها لدى البنوك الأعضاء في المؤسسة الفلسطينية
+                            لضمان الودائع.
+                            قم باختيار أحد هذه البنوك ومن ثم قم بتحديد نوع الحساب: سواء أكان حساب شخصي، حساب شركات، او
+                            حساب حكومي لدى البنك العضو
+                            ومن ثم طباعة التقرير، أما إذا كان لديك حساب في أكثر من بنك فيمكن الرجوع مرة أخرى واختيار
+                            البنك الاخر واتباع الخطوات
+                            السابقة وهكذا...، وبالتالي يمكنك الحصول على تقرير بمعلومات حول ودائعك في كل بنك على حدا.</p>
+                    </div>
+                    <div class="section2">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item my-1">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        أضف بياناتك
+                                    </button>
+                                </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse show divaccordion-body"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <label class="lable-title" for="banks">اسم البنك</label>
+                                                <select name="banks" class="form-select" id="banks">
+                                                    <option value="1">بنك فلسطين </option>
+                                                    <option value="2">بنك العربي </option>
+                                                    <option value="3">بنك الأهلي </option>
+                                                    <option value="4">بنك القدس </option>
+                                                    <option value="5">بنك الاسكان </option>
+                                                    <option value="6">بنك الاسلامي العربي </option>
+                                                </select>
+                                            </div>
+                                            <div class="d-flex align-items-center my-3">
+                                                <label class="lable-title" for=""> وصف حساب</label>
+
+                                                <div class="form-check postion">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" onchange="handleRadioChange()">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        حساب أفراد
+                                                        <div class="tooltip2">
+                                                            <p> هو حساب ودائع الذي تعود مليكته للأفراد، ويشمل: الحساب
+                                                                الفردي و الحساب المشترك
+                                                            </p>
+                                                        </div>
+                                                    </label>
+
+                                                </div>
+                                                <div class="form-check postion">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2" onchange="handleRadioChange()">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        حساب شركات
+                                                        <div class="tooltip2">
+                                                            <p> حساب الشركات: هو حساب للودائع التي تخص كافة أنواع
+                                                                الشركات او الجمعيات.
+                                                            </p>
+                                                        </div>
+
+                                                    </label>
+                                                </div>
+                                                <div class="form-check postion">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault3" onchange="handleRadioChange()">
+                                                    <label class="form-check-label" for="flexRadioDefault3">
+                                                        حساب حكومي
+
+                                                        <div class="tooltip2">
+                                                            <p>الحساب الحكومي: هي حسابات تعود ملكيتها للقطاع العام مثل
+                                                                الوزارات والمدراس و.. الخ، وهذا النوع من الحسابات لا
+                                                                يدخل ضمن
+                                                                نظام ضمان الودائع للمؤسسة.</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check postion">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault4" onchange="handleRadioChange()">
+                                                    <label class="form-check-label" for="flexRadioDefault4">
+                                                        حساب ذوي الصله
+                                                        <div class="tooltip2">
+                                                            <p> "هو الشخص الطبيعي او المعنوي الذي تربطه علاقة بالمصرف
+                                                                مثل عضو مجلس إدارة او مستشار للبنك ..الخ
+                                                            </p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="show1">
+                                            <form>
+                                                <h3>حسابات الافراد
+                                                </h3>
+                                                <div class="d-flex align-items-center mt-5">
+                                                    <label class="" for="owner">نوع مالك الحساب</label>
+                                                    <select name="owner" onchange="ChangeState()" class="form-select"
+                                                        id="owner">
+                                                        <option selected>اختر ...</option>
+                                                        <option value="1">فرد </option>
+                                                        <option value="2"> مشترك </option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-2  mt-5" id="numbersubscribersaccount">
+                                                    <label for="Numberofsubscribers" class="form-label">عدد المشتركين في
+                                                        الحساب
+                                                    </label>
+                                                    <input type="number" class="form-control" id="Numberofsubscribers">
+
+                                                </div>
+
+                                                <div class="mb-2 d-flex mt-4">
+                                                    <label for="name" class="form-label">اسم تعريفي
+                                                        للحساب</label>
+                                                    <input type="text" class="form-control" id="name">
+
+                                                </div>
+                                                <div class="mb-2 d-flex">
+                                                    <label for="account" class="form-label">رصيد
+                                                        الحساب</label>
+                                                    <input type="number" class="form-control" id="account"
+                                                        aria-describedby="accountlHelp">
+                                                    <div id="accountlHelp" class="form-text mx-2">
+                                                        (أدخل
+                                                        القيمه بالأرقام بعملة الدولار )
+
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                            <form class="mt-5">
+                                                <h3>القروض و الكفالات
+                                                </h3>
+                                                <div class="mb-2 mt-5 d-flex">
+                                                    <label for="loanamount" class="form-label">
+                                                        قيمة القرض الممنوح</label>
+                                                    <input type="number" class="form-control" id="loanamount"
+                                                        aria-describedby="loanamountlHelp">
+                                                    <div id="loanamountlHelp" class="form-text mx-2">
+                                                        (أدخل
+                                                        القيمه بالأرقام بعملة الدولار )
+
+                                                    </div>
+                                                    <div id="" class="form-text mx-2">
+                                                        ( على افتراض أن القرض يخص المالك الاول)
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 d-flex">
+                                                    <label for="loanbalance" class="form-label">
+                                                        رصيد القرض القائم</label>
+                                                    <input type="number" class="form-control" id="loanbalance"
+                                                        aria-describedby="loanbalanceHelp">
+                                                    <div id="loanbalanceHelp" class="form-text mx-2">
+                                                        (أدخل
+                                                        القيمه بالأرقام بعملة الدولار )
+
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 d-flex">
+                                                    <label for="securityloan" class="form-label">
+                                                        قيمة التأمينات النقديه على القرض</label>
+                                                    <input type="number" class="form-control" id="securityloan"
+                                                        aria-describedby="securityloanHelp">
+                                                    <div id="securityloanHelp" class="form-text mx-2">
+                                                        (أدخل
+                                                        القيمه بالأرقام بعملة الدولار )
+
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div id="show2">
+                                            <form>
+                                                <h3>حسابات الشركات
+                                                </h3>
+                                                <div class="d-flex align-items-center">
+                                                    <label class="" for="company">نوع الشركة</label>
+                                                    <select name="company" onchange="ChangeState2()" class="form-select"
+                                                        id="company">
+                                                        <option selected>اختر ...</option>
+                                                        <option value="1">تأمين أو وساطه </option>
+                                                        <option value="2"> أخرى </option>
+                                                    </select>
+                                                </div>
+
+                                            </form>
+                                            <div id="showsection1" class="mt-5">
+                                                <form>
+                                                    <div class="mb-2 d-flex mt-5">
+                                                        <label for="name" class="form-label">اسم تعريفي
+                                                            للحساب</label>
+                                                        <input type="text" class="form-control" id="name">
+
+                                                    </div>
+                                                    <div class="mb-3 d-flex">
+                                                        <label for="account" class="form-label">رصيد
+                                                            الحساب</label>
+                                                        <input type="number" class="form-control" id="account"
+                                                            aria-describedby="accountlHelp">
+                                                        <div id="accountlHelp" class="form-text mx-2">
+                                                            (أدخل
+                                                            القيمه بالأرقام بعملة الدولار )
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </form>
+                                                <form class="mt-5">
+                                                    <h3>القروض و الكفالات
+                                                    </h3>
+                                                    <div class="mb-2 mt-5 d-flex">
+                                                        <label for="loanamount" class="form-label">
+                                                            قيمة القرض الممنوح</label>
+                                                        <input type="number" class="form-control" id="loanamount"
+                                                            aria-describedby="loanamountlHelp">
+                                                        <div id="loanamountlHelp" class="form-text mx-2">
+                                                            (أدخل
+                                                            القيمه بالأرقام بعملة الدولار )
+
+                                                        </div>
+                                                        <div id="" class="form-text mx-2">
+                                                            ( على افتراض أن القرض يخص المالك الاول)
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-2 d-flex">
+                                                        <label for="loanbalance" class="form-label">
+                                                            رصيد القرض القائم</label>
+                                                        <input type="number" class="form-control" id="loanbalance"
+                                                            aria-describedby="loanbalanceHelp">
+                                                        <div id="loanbalanceHelp" class="form-text mx-2">
+                                                            (أدخل
+                                                            القيمه بالأرقام بعملة الدولار )
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-2 d-flex">
+                                                        <label for="securityloan" class="form-label">
+                                                            قيمة التأمينات النقديه على القرض</label>
+                                                        <input type="number" class="form-control" id="securityloan"
+                                                            aria-describedby="securityloanHelp">
+                                                        <div id="securityloanHelp" class="form-text mx-2">
+                                                            (أدخل
+                                                            القيمه بالأرقام بعملة الدولار )
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div id="showsection2">
+                                                <h3 class="my-5 d-flex
+    align-items-center
+    justify-content-center">نأسف نحن لانضمن هذا النوع من الحسابات
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div id="show3">
+                                            <h3>حسابات حكوميه
+                                            </h3>
+                                            <h3 class="my-5 d-flex
+    align-items-center
+    justify-content-center">نأسف نحن لانضمن هذا النوع من الحسابات
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item my-1">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        التقارير
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo" class="accordion-collapse collapse divaccordion-body"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <button type="reset" class="btn btn-secondary">أضف حساب جديد</button>
+                                        <button type="reset" class="btn btn-secondary">ابدأ من جديد</button>
+                                        <button type="reset" class="btn btn-secondary">طباعة التقرير</button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="d-flex
+    align-items-center
+    justify-content-end mt-5">
+                        <img src="https://www.hitwebcounter.com/counter/counter.php?page=6390141&style=0027&nbdigits=5&type=ip&initCount=0"
+                            alt="URL" title="عدد الزوار">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
