@@ -310,95 +310,101 @@
                                             </div>
                                             <div id="show1">
                                                 <form>
-                                                    <h3>حسابات الافراد
-                                                    </h3>
-                                                    <div class="d-flex align-items-center mt-5">
-                                                        <label class="" for="owner">نوع مالك الحساب</label>
-                                                        <select name="owner" onchange="ChangeState()"
-                                                            class="form-select" id="owner">
-                                                            <option selected>اختر ...</option>
-                                                            <option value="1">فرد </option>
-                                                            <option value="2"> مشترك </option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-2  mt-5" id="numbersubscribersaccount">
-                                                        <label for="Numberofsubscribers" class="form-label">عدد
-                                                            المشتركين في
-                                                            الحساب
-                                                        </label>
-                                                        <input type="number" class="form-control"
-                                                            id="Numberofsubscribers">
-
-                                                    </div>
-
-                                                    <div class="mb-2 d-flex mt-4">
-                                                        <label for="name" class="form-label">اسم تعريفي
-                                                            للحساب</label>
-                                                        <input type="text" class="form-control" id="name">
-
-                                                    </div>
-                                                    <div class="mb-2 d-flex">
-                                                        <label for="account" class="form-label">رصيد
-                                                            الحساب</label>
-                                                        <input type="number" class="form-control" id="account"
-                                                            aria-describedby="accountlHelp">
-                                                        <div id="accountlHelp" class="form-text mx-2">
-                                                            (أدخل
-                                                            القيمه بالأرقام بعملة الدولار )
+                                                    <div>
+                                                        <h3>حسابات الافراد
+                                                        </h3>
+                                                        <div class="d-flex align-items-center mt-5">
+                                                            <label class="" for="owner">نوع مالك الحساب</label>
+                                                            <select name="owner" onchange="ChangeState()"
+                                                                class="form-select" id="owner">
+                                                                <option selected>اختر ...</option>
+                                                                <option value="1">فرد </option>
+                                                                <option value="2"> مشترك </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-2  mt-5" id="numbersubscribersaccount">
+                                                            <label for="Numberofsubscribers" class="form-label">عدد
+                                                                المشتركين في
+                                                                الحساب
+                                                            </label>
+                                                            <input type="number" class="form-control"
+                                                                id="Numberofsubscribers">
 
                                                         </div>
-                                                    </div>
 
-                                                </form>
-                                                <form class="mt-5">
-                                                    <h3>القروض و الكفالات
-                                                    </h3>
-                                                    <div class="mb-2 mt-5">
-                                                        <div class=" d-flex">
-                                                            <label for="loanamount" class="form-label">
-                                                                قيمة القرض الممنوح</label>
-                                                            <input type="number" class="form-control" id="loanamount"
-                                                                aria-describedby="loanamountlHelp">
-                                                            <div id="loanamountlHelp" class="form-text mx-2">
+                                                        <div class="mb-2 d-flex mt-4">
+                                                            <label for="name" class="form-label">اسم تعريفي
+                                                                للحساب</label>
+                                                            <input type="text" class="form-control" id="name">
+
+                                                        </div>
+                                                        <div class="mb-2 d-flex">
+                                                            <label for="account" class="form-label">رصيد
+                                                                الحساب</label>
+                                                            <input type="number" class="form-control" id="account"
+                                                                aria-describedby="accountlHelp">
+                                                            <div id="accountlHelp" class="form-text mx-2">
                                                                 (أدخل
                                                                 القيمه بالأرقام بعملة الدولار )
 
                                                             </div>
                                                         </div>
-                                                        <div id="" class="form-text mx-2 mb-3">
-                                                            ( على افتراض أن القرض يخص المالك الاول)
 
+                                                    </div>
+                                                    <div class="mt-5">
+                                                        <h3>القروض و الكفالات
+                                                        </h3>
+                                                        <div class="mb-2 mt-5">
+                                                            <div class=" d-flex">
+                                                                <label for="loanamount" class="form-label">
+                                                                    قيمة القرض الممنوح</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="loanamount" aria-describedby="loanamountlHelp">
+                                                                <div id="loanamountlHelp" class="form-text mx-2">
+                                                                    (أدخل
+                                                                    القيمه بالأرقام بعملة الدولار )
+
+                                                                </div>
+                                                            </div>
+                                                            <div id="" class="form-text mx-2 mb-3">
+                                                                ( على افتراض أن القرض يخص المالك الاول)
+
+
+                                                            </div>
 
                                                         </div>
 
-                                                    </div>
+                                                        <div class="mb-2 d-flex">
+                                                            <label for="loanbalance" class="form-label">
+                                                                رصيد القرض القائم</label>
+                                                            <input type="number" class="form-control" id="loanbalance"
+                                                                aria-describedby="loanbalanceHelp">
+                                                            <div id="loanbalanceHelp" class="form-text mx-2">
+                                                                (أدخل
+                                                                القيمه بالأرقام بعملة الدولار )
 
-                                                    <div class="mb-2 d-flex">
-                                                        <label for="loanbalance" class="form-label">
-                                                            رصيد القرض القائم</label>
-                                                        <input type="number" class="form-control" id="loanbalance"
-                                                            aria-describedby="loanbalanceHelp">
-                                                        <div id="loanbalanceHelp" class="form-text mx-2">
-                                                            (أدخل
-                                                            القيمه بالأرقام بعملة الدولار )
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-2 d-flex">
+                                                            <label for="securityloan" class="form-label">
+                                                                قيمة التأمينات النقديه على القرض</label>
+                                                            <input type="number" class="form-control" id="securityloan"
+                                                                aria-describedby="securityloanHelp">
+                                                            <div id="securityloanHelp" class="form-text mx-2">
+                                                                (أدخل
+                                                                القيمه بالأرقام بعملة الدولار )
 
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-2 d-flex">
-                                                        <label for="securityloan" class="form-label">
-                                                            قيمة التأمينات النقديه على القرض</label>
-                                                        <input type="number" class="form-control" id="securityloan"
-                                                            aria-describedby="securityloanHelp">
-                                                        <div id="securityloanHelp" class="form-text mx-2">
-                                                            (أدخل
-                                                            القيمه بالأرقام بعملة الدولار )
 
-                                                        </div>
-                                                    </div>
+                                                    <button type="reset" class="btn btn-secondary">أضف
+
+                                                        أضافة للتقرير</button>
                                                 </form>
                                             </div>
                                             <div id="show2">
-                                                <form>
+                                                <div>
                                                     <h3>حسابات الشركات
                                                     </h3>
                                                     <div class="d-flex align-items-center">
@@ -411,9 +417,9 @@
                                                         </select>
                                                     </div>
 
-                                                </form>
+                                                </div>
                                                 <div id="showsection1" class="mt-5">
-                                                    <form>
+                                                    <div>
                                                         <div class="mb-2 d-flex mt-5">
                                                             <label for="name" class="form-label">اسم تعريفي
                                                                 للحساب</label>
@@ -434,8 +440,8 @@
 
 
 
-                                                    </form>
-                                                    <form class="mt-5">
+                                                    </div>
+                                                    <div class="mt-5">
                                                         <h3>القروض و الكفالات
                                                         </h3>
                                                         <div class="mb-2 mt-5">
@@ -481,7 +487,11 @@
 
                                                             </div>
                                                         </div>
-                                                    </form>
+                                                    </div>
+
+                                                    <button type="reset" class="btn btn-secondary">أضف
+
+                                                        أضافة للتقرير</button>
                                                 </div>
                                                 <div id="showsection2">
                                                     <h3 class="my-5 d-flex
