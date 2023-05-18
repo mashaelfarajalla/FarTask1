@@ -93,6 +93,24 @@
             console.log(collapseOne)
             collapseOne.classList.add('show')
             collapseTwo.classList.remove('show')
+            let banks = document.getElementById("banks");
+            banks.disabled = true;
+
+
+
+        }
+        function btn2() {
+            let collapseOne = document.getElementById('collapseOne')
+            let collapseTwo = document.getElementById('collapseTwo')
+
+            console.log("click");
+            console.log(collapseOne)
+            collapseOne.classList.add('show')
+            collapseTwo.classList.remove('show')
+            let banks = document.getElementById("banks");
+
+            banks.disabled = false;
+
 
 
         }
