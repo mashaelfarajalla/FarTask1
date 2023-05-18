@@ -59,7 +59,7 @@
 
             }
             else {
-                document.getElementById('numbersubscribersaccount').style.display = "none"
+                document.getElementById('numbersubscriberssaccount').style.display = "none"
             }
         }
 
@@ -85,6 +85,17 @@
             }
         }
 
+        function btn1() {
+            let collapseOne = document.getElementById('collapseOne')
+            let collapseTwo = document.getElementById('collapseTwo')
+
+            console.log("click");
+            console.log(collapseOne)
+            collapseOne.classList.add('show')
+            collapseTwo.classList.remove('show')
+
+
+        }
     </script>
 </head>
 
@@ -103,7 +114,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
                         </li>
@@ -171,8 +182,8 @@
         <div class="bg-white">
             <div class="container ">
                 <div class="row bg-white">
-                    <div class="col-12" style="    padding: 19px 19px;">
-                        <div class="sectiontitle">
+                    <div class="col-lg-12" style="    padding: 19px 19px;">
+                        <div class="row sectiontitle">
                             <h2>طريقة الاحتساب</h2>
                             <p>تتيح هذه النافذة إمكانية احتساب الودائع المؤمن عليها لدى البنوك الأعضاء في المؤسسة
                                 الفلسطينية
@@ -185,7 +196,7 @@
                                 السابقة وهكذا...، وبالتالي يمكنك الحصول على تقرير بمعلومات حول ودائعك في كل بنك على حدا.
                             </p>
                         </div>
-                        <div class="section2">
+                        <div class="row section2">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item my-1">
                                     <h3 class="accordion-header">
@@ -210,67 +221,72 @@
                                                         <option value="6">بنك الاسلامي العربي </option>
                                                     </select>
                                                 </div>
-                                                <div class="d-flex align-items-center my-3">
+                                                <div class="row align-items-center my-3">
                                                     <label class="lable-title" for=""> وصف حساب</label>
 
-                                                    <div class="form-check postion">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="flexRadioDefault" id="flexRadioDefault1"
-                                                            onchange="handleRadioChange()">
-                                                        <label class="form-check-label" for="flexRadioDefault1">
-                                                            حساب أفراد
-                                                            <div class="tooltip2">
-                                                                <p> هو حساب ودائع الذي تعود مليكته للأفراد، ويشمل:
-                                                                    الحساب
-                                                                    الفردي و الحساب المشترك
-                                                                </p>
-                                                            </div>
-                                                        </label>
+                                                    <div class="row d-flex justify-content-evenly">
+                                                        <div class="col-md-6 col-lg-auto form-check postion">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault1"
+                                                                onchange="handleRadioChange()">
+                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                حساب أفراد
+                                                                <div class="tooltip2">
+                                                                    <p> هو حساب ودائع الذي تعود مليكته للأفراد، ويشمل:
+                                                                        الحساب
+                                                                        الفردي و الحساب المشترك
+                                                                    </p>
+                                                                </div>
+                                                            </label>
 
-                                                    </div>
-                                                    <div class="form-check postion">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="flexRadioDefault" id="flexRadioDefault2"
-                                                            onchange="handleRadioChange()">
-                                                        <label class="form-check-label" for="flexRadioDefault2">
-                                                            حساب شركات
-                                                            <div class="tooltip2">
-                                                                <p> حساب الشركات: هو حساب للودائع التي تخص كافة أنواع
-                                                                    الشركات او الجمعيات.
-                                                                </p>
-                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-auto form-check postion">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault2"
+                                                                onchange="handleRadioChange()">
+                                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                                حساب شركات
+                                                                <div class="tooltip2">
+                                                                    <p> حساب الشركات: هو حساب للودائع التي تخص كافة
+                                                                        أنواع
+                                                                        الشركات او الجمعيات.
+                                                                    </p>
+                                                                </div>
 
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check postion">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="flexRadioDefault" id="flexRadioDefault3"
-                                                            onchange="handleRadioChange()">
-                                                        <label class="form-check-label" for="flexRadioDefault3">
-                                                            حساب حكومي
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-auto form-check postion">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault3"
+                                                                onchange="handleRadioChange()">
+                                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                                حساب حكومي
 
-                                                            <div class="tooltip2">
-                                                                <p>الحساب الحكومي: هي حسابات تعود ملكيتها للقطاع العام
-                                                                    مثل
-                                                                    الوزارات والمدراس و.. الخ، وهذا النوع من الحسابات لا
-                                                                    يدخل ضمن
-                                                                    نظام ضمان الودائع للمؤسسة.</p>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check postion">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="flexRadioDefault" id="flexRadioDefault4"
-                                                            onchange="handleRadioChange()">
-                                                        <label class="form-check-label" for="flexRadioDefault4">
-                                                            حساب ذوي الصله
-                                                            <div class="tooltip2">
-                                                                <p> "هو الشخص الطبيعي او المعنوي الذي تربطه علاقة
-                                                                    بالمصرف
-                                                                    مثل عضو مجلس إدارة او مستشار للبنك ..الخ
-                                                                </p>
-                                                            </div>
-                                                        </label>
+                                                                <div class="tooltip2">
+                                                                    <p>الحساب الحكومي: هي حسابات تعود ملكيتها للقطاع
+                                                                        العام
+                                                                        مثل
+                                                                        الوزارات والمدراس و.. الخ، وهذا النوع من
+                                                                        الحسابات لا
+                                                                        يدخل ضمن
+                                                                        نظام ضمان الودائع للمؤسسة.</p>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-auto form-check postion">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault4"
+                                                                onchange="handleRadioChange()">
+                                                            <label class="form-check-label" for="flexRadioDefault4">
+                                                                حساب ذوي الصله
+                                                                <div class="tooltip2">
+                                                                    <p> "هو الشخص الطبيعي او المعنوي الذي تربطه علاقة
+                                                                        بالمصرف
+                                                                        مثل عضو مجلس إدارة او مستشار للبنك ..الخ
+                                                                    </p>
+                                                                </div>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -319,21 +335,24 @@
                                                 <form class="mt-5">
                                                     <h3>القروض و الكفالات
                                                     </h3>
-                                                    <div class="mb-2 mt-5 d-flex">
-                                                        <label for="loanamount" class="form-label">
-                                                            قيمة القرض الممنوح</label>
-                                                        <input type="number" class="form-control" id="loanamount"
-                                                            aria-describedby="loanamountlHelp">
-                                                        <div id="loanamountlHelp" class="form-text mx-2">
-                                                            (أدخل
-                                                            القيمه بالأرقام بعملة الدولار )
+                                                    <div class="mb-2 mt-5">
+                                                        <div class=" d-flex">
+                                                            <label for="loanamount" class="form-label">
+                                                                قيمة القرض الممنوح</label>
+                                                            <input type="number" class="form-control" id="loanamount"
+                                                                aria-describedby="loanamountlHelp">
+                                                            <div id="loanamountlHelp" class="form-text mx-2">
+                                                                (أدخل
+                                                                القيمه بالأرقام بعملة الدولار )
 
+                                                            </div>
                                                         </div>
-                                                        <div id="" class="form-text mx-2">
+                                                        <div id="" class="form-text mx-2 mb-3">
                                                             ( على افتراض أن القرض يخص المالك الاول)
 
 
                                                         </div>
+
                                                     </div>
 
                                                     <div class="mb-2 d-flex">
@@ -401,22 +420,26 @@
                                                     <form class="mt-5">
                                                         <h3>القروض و الكفالات
                                                         </h3>
-                                                        <div class="mb-2 mt-5 d-flex">
-                                                            <label for="loanamount" class="form-label">
-                                                                قيمة القرض الممنوح</label>
-                                                            <input type="number" class="form-control" id="loanamount"
-                                                                aria-describedby="loanamountlHelp">
-                                                            <div id="loanamountlHelp" class="form-text mx-2">
-                                                                (أدخل
-                                                                القيمه بالأرقام بعملة الدولار )
+                                                        <div class="mb-2 mt-5">
+                                                            <div class=" d-flex">
+                                                                <label for="loanamount" class="form-label">
+                                                                    قيمة القرض الممنوح</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="loanamount" aria-describedby="loanamountlHelp">
+                                                                <div id="loanamountlHelp" class="form-text mx-2">
+                                                                    (أدخل
+                                                                    القيمه بالأرقام بعملة الدولار )
 
+                                                                </div>
                                                             </div>
-                                                            <div id="" class="form-text mx-2">
+                                                            <div id="" class="form-text mx-2 mb-3">
                                                                 ( على افتراض أن القرض يخص المالك الاول)
 
 
                                                             </div>
+
                                                         </div>
+
 
                                                         <div class="mb-2 d-flex">
                                                             <label for="loanbalance" class="form-label">
@@ -471,9 +494,12 @@
                                     <div id="collapseTwo" class="accordion-collapse collapse divaccordion-body"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <button type="reset" class="btn btn-secondary">أضف حساب جديد</button>
-                                            <button type="reset" class="btn btn-secondary">ابدأ من جديد</button>
-                                            <button type="reset" class="btn btn-secondary">طباعة التقرير</button>
+                                            <button type="reset" onclick="btn1()" class="btn btn-secondary">أضف حساب
+                                                جديد</button>
+                                            <button type="reset" onclick="btn2()" class="btn btn-secondary">ابدأ من
+                                                جديد</button>
+                                            <button type="reset" onclick="btn3()" class="btn btn-secondary">طباعة
+                                                التقرير</button>
 
                                         </div>
                                     </div>
@@ -481,7 +507,7 @@
 
                             </div>
                         </div>
-                        <div class="d-flex
+                        <div class="row d-flex
          align-items-center
          justify-content-end mt-5">
                             <img src="https://www.hitwebcounter.com/counter/counter.php?page=6390141&style=0027&nbdigits=5&type=ip&initCount=0"
@@ -491,6 +517,9 @@
                 </div>
             </div>
         </div>
+
+
+
 
         <div>
             <div class="container my-5">
@@ -547,7 +576,7 @@
                             <p>دولة فلسطين</p>
                         </div>
                     </div>
-                    <div class="col-lg-auto col-md-6 mb-4">
+                    <div class="col-lg-auto col-md-auto mb-4">
                         <h5 class="mb-3 ">ضمان الودائع</h5>
                         <ul class="list-unstyled mb-0">
                             <li class="mb-1">
@@ -572,7 +601,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-auto col-md-6 mb-4">
+                    <div class="col-lg-auto col-md-auto mb-4">
                         <h5 class="mb-3 ">
                             بيانات واحصائيات
                         </h5>
@@ -595,7 +624,7 @@
 
                         </ul>
                     </div>
-                    <div class="col-lg-auto col-md-6 mb-4">
+                    <div class="col-lg-auto col-md-auto mb-4">
                         <h5 class="mb-3 "> تشريعات</h5>
                         <ul class="list-unstyled mb-0">
                             <li class="mb-1">
@@ -619,11 +648,11 @@
 
                 </div>
                 <div class="row" style="margin: 0px 44px;">
-                    <div class="col-lg-auto">
+                    <div class="col-sm-auto">
                         <a><i class="fa-solid fa-phone"></i></a>
                         <p class="d-inline-block" style="color: #037383;">هاتف</p>
                     </div>
-                    <div class="col-lg-auto">
+                    <div class="col-sm-auto">
                         <a><i class="fa-solid fa-envelope"></i></a>
                         <p class="d-inline-block" style="color: #037383;">بريد الكتروني</p>
                     </div>
@@ -663,8 +692,8 @@
             breakpoints: {
                 // when window width is >= 320px
                 320: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
+                    slidesPerView: 1,
+                    spaceBetween: 40
                 },
                 // when window width is >= 480px
                 480: {
@@ -673,7 +702,7 @@
                 },
                 // when window width is >= 640px
                 640: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 20
                 },
                 992: {

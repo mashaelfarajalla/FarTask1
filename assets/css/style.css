@@ -112,7 +112,6 @@ body {
 }
 
 label:hover .tooltip2 {
-    right: 40%;
     opacity: 1;
 }
 
@@ -229,11 +228,25 @@ footer .list-unstyled {
     .form-select {
         width: 20%;
     }
+
+    label:hover .tooltip2 {
+        right: 40%;
+    }
 }
 
 @media screen and (max-width: 767px) {
     .form-select {
         width: 55%;
+    }
+
+    .tooltip2 {
+        display: none;
+    }
+
+    footer .p p {
+        display: inline-block;
+        margin: 0 15px;
+
     }
 }
 
@@ -242,6 +255,15 @@ footer .list-unstyled {
         width: 20%;
     }
 
+    .tooltip2 {
+        display: none;
+
+    }
+
+    footer .p p {
+        display: inline-block;
+        margin: 0 20px;
+    }
 }
 
 /* @media (min-width: 1400px) {
