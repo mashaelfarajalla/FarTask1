@@ -13,6 +13,15 @@ select:disabled {
     border-color: rgba(118, 118, 118, 0.3);
 }
 
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-style: none !important;
+}
+
 .container .sectiontitle h2 {
     font-size: 30px;
     line-height: 56px;

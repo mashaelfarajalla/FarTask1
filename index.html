@@ -114,6 +114,67 @@
 
 
         }
+
+        let data = [{ id: 1, name: "mase", Number1: 3, Number2: 2, Number3: 5 }]
+        function displaydatatable() {
+            var html = "<table class='table'>";
+            setTimeout(() => {
+                html += "<thead>";
+                html += "<tr>";
+                html += "<td>" + 'اسم الحساب' + "</td>";
+                html += "<td>" + ' الودائع' + "</td>";
+                html += "<td>" + 'القروض ' + "</td>";
+                html += "</tr>";
+                html += "</thead>";
+                for (i = 0; i < data.length; i++) {
+                    html += "<tr>";
+                    html += "<td>" + data[i].name + "</td>";
+                    html += "<td>" + (data[i].Number1 + data[i].Number3) + "</td>";
+                    html += "<td>" + data[i].Number2 + "</td>";
+                    html += "</tr>";
+
+                }
+                html += "</table>";
+
+                document.getElementById('table').innerHTML = html
+
+
+            }, 200);
+        }
+        displaydatatable();
+        // function AddTable() {
+
+        //     var input2 = document.getElementById('input2');
+        //     var input3 = document.getElementById('input3').value;
+        //     var input4 = document.getElementById('input4').value;
+        //     var input5 = document.getElementById('input5').value;
+        //     var input6 = document.getElementById('input6').value;
+        //     // var input7 = document.getElementById('input7').value;
+
+        //     if (input2.value === "") {
+        //         alert("الرجاء اضافة اسم تعريفي للحساب");
+        //         setTimeout(function () {
+        //             input2.focus();
+        //         }, 100);
+
+
+
+        //     }
+
+        //     // document.getElementById('input3').value = 0;
+        //     // input3.value = 0;
+        //     // input4.value = 0;
+        //     // input5.value = 0;
+        //     // input6.value = 0;
+        //     // let collapseOne = document.getElementById('collapseOne')
+        //     // let collapseTwo = document.getElementById('collapseTwo')
+        //     // collapseTwo.classList.add('show')
+        //     // collapseOne.classList.remove('show')
+
+        // }
+
+
+
     </script>
 </head>
 
@@ -323,25 +384,24 @@
                                                             </select>
                                                         </div>
                                                         <div class="mb-2  mt-5" id="numbersubscribersaccount">
-                                                            <label for="Numberofsubscribers" class="form-label">عدد
+                                                            <label for="input1" class="form-label">عدد
                                                                 المشتركين في
                                                                 الحساب
                                                             </label>
-                                                            <input type="number" class="form-control"
-                                                                id="Numberofsubscribers">
+                                                            <input type="number" class="form-control" id="input1">
 
                                                         </div>
 
                                                         <div class="mb-2 d-flex mt-4">
-                                                            <label for="name" class="form-label">اسم تعريفي
+                                                            <label for="input2" class="form-label">اسم تعريفي
                                                                 للحساب</label>
-                                                            <input type="text" class="form-control" id="name">
+                                                            <input type="text" class="form-control" id="input2">
 
                                                         </div>
                                                         <div class="mb-2 d-flex">
-                                                            <label for="account" class="form-label">رصيد
+                                                            <label for="input3" class="form-label">رصيد
                                                                 الحساب</label>
-                                                            <input type="number" class="form-control" id="account"
+                                                            <input type="number" class="form-control" id="input3"
                                                                 aria-describedby="accountlHelp">
                                                             <div id="accountlHelp" class="form-text mx-2">
                                                                 (أدخل
@@ -356,10 +416,10 @@
                                                         </h3>
                                                         <div class="mb-2 mt-5">
                                                             <div class=" d-flex">
-                                                                <label for="loanamount" class="form-label">
+                                                                <label for="input4" class="form-label">
                                                                     قيمة القرض الممنوح</label>
-                                                                <input type="number" class="form-control"
-                                                                    id="loanamount" aria-describedby="loanamountlHelp">
+                                                                <input type="number" class="form-control" id="input4"
+                                                                    aria-describedby="loanamountlHelp">
                                                                 <div id="loanamountlHelp" class="form-text mx-2">
                                                                     (أدخل
                                                                     القيمه بالأرقام بعملة الدولار )
@@ -375,9 +435,9 @@
                                                         </div>
 
                                                         <div class="mb-2 d-flex">
-                                                            <label for="loanbalance" class="form-label">
+                                                            <label for="input5" class="form-label">
                                                                 رصيد القرض القائم</label>
-                                                            <input type="number" class="form-control" id="loanbalance"
+                                                            <input type="number" class="form-control" id="input5"
                                                                 aria-describedby="loanbalanceHelp">
                                                             <div id="loanbalanceHelp" class="form-text mx-2">
                                                                 (أدخل
@@ -386,9 +446,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="mb-2 d-flex">
-                                                            <label for="securityloan" class="form-label">
+                                                            <label for="input6" class="form-label">
                                                                 قيمة التأمينات النقديه على القرض</label>
-                                                            <input type="number" class="form-control" id="securityloan"
+                                                            <input type="number" class="form-control" id="input6"
                                                                 aria-describedby="securityloanHelp">
                                                             <div id="securityloanHelp" class="form-text mx-2">
                                                                 (أدخل
@@ -398,7 +458,8 @@
                                                         </div>
                                                     </div>
 
-                                                    <button type="reset" class="btn btn-secondary">أضف
+                                                    <button type="reset" onclick="checkAndFocus()"
+                                                        class="btn btn-secondary">أضف
 
                                                         أضافة للتقرير</button>
                                                 </form>
@@ -489,7 +550,8 @@
                                                         </div>
                                                     </div>
 
-                                                    <button type="reset" class="btn btn-secondary">أضف
+                                                    <button type="reset" onclick="checkAndFocus()"
+                                                        class="btn btn-secondary">أضف
 
                                                         أضافة للتقرير</button>
                                                 </div>
@@ -522,12 +584,41 @@
                                     <div id="collapseTwo" class="accordion-collapse collapse divaccordion-body"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <button type="reset" onclick="btn1()" class="btn btn-secondary">أضف حساب
-                                                جديد</button>
-                                            <button type="reset" onclick="btn2()" class="btn btn-secondary">ابدأ من
-                                                جديد</button>
-                                            <button type="reset" onclick="btn3()" class="btn btn-secondary">طباعة
-                                                التقرير</button>
+                                            <div id="table" class="row justify-content-center">
+                                                <!-- <table id="mytable" class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col-3">اسم الحساب</th>
+                                                            <th scope="col-3">الودائع</th>
+                                                            <th scope="col-3">القروض</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Mark</td>
+                                                            <td>Otto</td>
+                                                            <td>@mdo</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jacob</td>
+                                                            <td>Thornton</td>
+                                                            <td>@fat</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">Larry the Bird</td>
+                                                            <td>@twitter</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table> -->
+                                            </div>
+                                            <div>
+                                                <button type="reset" onclick="btn1()" class="btn btn-secondary">أضف حساب
+                                                    جديد</button>
+                                                <button type="reset" onclick="btn2()" class="btn btn-secondary">ابدأ من
+                                                    جديد</button>
+                                                <button type="reset" onclick="btn3()" class="btn btn-secondary">طباعة
+                                                    التقرير</button>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -734,6 +825,50 @@
                 }
             }
         });
+
+
+        function checkAndFocus() {
+            const input2 = document.getElementById('input2');
+
+            if (input2.value === "") {
+                alert("الرجاء إضافة اسم تعريفي للحساب");
+                setTimeout(function () {
+
+                    input2.focus();
+                }, 100);
+            } else {
+                // القم بأي إجراء آخر إذا كان هناك سلوك آخر بعد التحقق من الحقل
+                AddTable();
+            }
+        }
+
+
+        function AddTable() {
+
+            console.log("Add table")
+            var input2 = document.getElementById('input2');
+            var input3 = document.getElementById('input3').value;
+            var input4 = document.getElementById('input4').value;
+            var input5 = document.getElementById('input5').value;
+            var input6 = document.getElementById('input6').value;
+            // var input7 = document.getElementById('input7').value;
+
+
+
+            // document.getElementById('input3').value = 0;
+            // input3.value = 0;
+            // input4.value = 0;
+            // input5.value = 0;
+            // input6.value = 0;
+            // let collapseOne = document.getElementById('collapseOne')
+            // let collapseTwo = document.getElementById('collapseTwo')
+            // collapseTwo.classList.add('show')
+            // collapseOne.classList.remove('show')
+
+        }
+
+
+
     </script>
 
 
