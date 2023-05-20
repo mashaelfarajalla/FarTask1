@@ -142,6 +142,7 @@
             }, 200);
         }
         displaydatatable();
+
         // function AddTable() {
 
         //     var input2 = document.getElementById('input2');
@@ -195,7 +196,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                            <a class="nav-link active" aria-current="page" href="Home.html">الرئيسية</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -401,8 +402,8 @@
                                                         <div class="mb-2 d-flex">
                                                             <label for="input3" class="form-label">رصيد
                                                                 الحساب</label>
-                                                            <input type="number" class="form-control" id="input3"
-                                                                aria-describedby="accountlHelp">
+                                                            <input type="number" class="form-control" value=""
+                                                                id="input3" aria-describedby="accountlHelp">
                                                             <div id="accountlHelp" class="form-text mx-2">
                                                                 (أدخل
                                                                 القيمه بالأرقام بعملة الدولار )
@@ -418,8 +419,8 @@
                                                             <div class=" d-flex">
                                                                 <label for="input4" class="form-label">
                                                                     قيمة القرض الممنوح</label>
-                                                                <input type="number" class="form-control" id="input4"
-                                                                    aria-describedby="loanamountlHelp">
+                                                                <input type="number" class="form-control" value=""
+                                                                    id="input4" aria-describedby="loanamountlHelp">
                                                                 <div id="loanamountlHelp" class="form-text mx-2">
                                                                     (أدخل
                                                                     القيمه بالأرقام بعملة الدولار )
@@ -437,8 +438,8 @@
                                                         <div class="mb-2 d-flex">
                                                             <label for="input5" class="form-label">
                                                                 رصيد القرض القائم</label>
-                                                            <input type="number" class="form-control" id="input5"
-                                                                aria-describedby="loanbalanceHelp">
+                                                            <input type="number" value="" class="form-control"
+                                                                id="input5" aria-describedby="loanbalanceHelp">
                                                             <div id="loanbalanceHelp" class="form-text mx-2">
                                                                 (أدخل
                                                                 القيمه بالأرقام بعملة الدولار )
@@ -448,8 +449,8 @@
                                                         <div class="mb-2 d-flex">
                                                             <label for="input6" class="form-label">
                                                                 قيمة التأمينات النقديه على القرض</label>
-                                                            <input type="number" class="form-control" id="input6"
-                                                                aria-describedby="securityloanHelp">
+                                                            <input type="number" value="" class="form-control"
+                                                                id="input6" aria-describedby="securityloanHelp">
                                                             <div id="securityloanHelp" class="form-text mx-2">
                                                                 (أدخل
                                                                 القيمه بالأرقام بعملة الدولار )
@@ -585,31 +586,7 @@
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div id="table" class="row justify-content-center">
-                                                <!-- <table id="mytable" class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col-3">اسم الحساب</th>
-                                                            <th scope="col-3">الودائع</th>
-                                                            <th scope="col-3">القروض</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Mark</td>
-                                                            <td>Otto</td>
-                                                            <td>@mdo</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Jacob</td>
-                                                            <td>Thornton</td>
-                                                            <td>@fat</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2">Larry the Bird</td>
-                                                            <td>@twitter</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table> -->
+
                                             </div>
                                             <div>
                                                 <button type="reset" onclick="btn1()" class="btn btn-secondary">أضف حساب
@@ -829,6 +806,10 @@
 
         function checkAndFocus() {
             const input2 = document.getElementById('input2');
+            const input3 = document.getElementById('input3').value;
+            const input4 = document.getElementById('input4').value;
+            const input5 = document.getElementById('input5').value;
+            const input6 = document.getElementById('input6').value;
 
             if (input2.value === "") {
                 alert("الرجاء إضافة اسم تعريفي للحساب");
@@ -836,7 +817,14 @@
 
                     input2.focus();
                 }, 100);
-            } else {
+
+
+            }
+            // if (input3.value === '') {
+            //     input3.value = 0
+            // }
+
+            else {
                 // القم بأي إجراء آخر إذا كان هناك سلوك آخر بعد التحقق من الحقل
                 AddTable();
             }
@@ -846,24 +834,25 @@
         function AddTable() {
 
             console.log("Add table")
-            var input2 = document.getElementById('input2');
+            var input2 = document.getElementById('input2').value;
             var input3 = document.getElementById('input3').value;
             var input4 = document.getElementById('input4').value;
             var input5 = document.getElementById('input5').value;
             var input6 = document.getElementById('input6').value;
-            // var input7 = document.getElementById('input7').value;
 
+            var id = data.length + 1;
 
+            data.push({ id: id, name: input2, Number1: parseInt(input3), Number2: parseInt(input5), Number3: parseInt(input6) })
 
-            // document.getElementById('input3').value = 0;
+            displaydatatable();
             // input3.value = 0;
             // input4.value = 0;
             // input5.value = 0;
             // input6.value = 0;
-            // let collapseOne = document.getElementById('collapseOne')
-            // let collapseTwo = document.getElementById('collapseTwo')
-            // collapseTwo.classList.add('show')
-            // collapseOne.classList.remove('show')
+            let collapseOne = document.getElementById('collapseOne');
+            let collapseTwo = document.getElementById('collapseTwo');
+            collapseTwo.classList.add('show');
+            collapseOne.classList.remove('show');
 
         }
 

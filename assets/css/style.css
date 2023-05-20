@@ -55,7 +55,7 @@ tr {
     width: 1.25rem;
     height: 1.25rem;
     content: "" !important;
-    background-image: url(assets/images/arrow_sign_icon.png);
+    background-image: url("../images/arrow_sign_icon.png");
     background-repeat: no-repeat;
     background-size: 1.25rem;
     transition: transform .2s ease-in-out;
