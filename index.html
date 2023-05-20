@@ -175,7 +175,6 @@
         // }
 
 
-
     </script>
 </head>
 
@@ -384,12 +383,15 @@
                                                                 <option value="2"> مشترك </option>
                                                             </select>
                                                         </div>
-                                                        <div class="mb-2  mt-5" id="numbersubscribersaccount">
-                                                            <label for="input1" class="form-label">عدد
-                                                                المشتركين في
-                                                                الحساب
-                                                            </label>
-                                                            <input type="number" class="form-control" id="input1">
+                                                        <div class="mb-2  mt-5">
+                                                            <div id="numbersubscribersaccount">
+                                                                <label for="input1" class="form-label">عدد
+                                                                    المشتركين في
+                                                                    الحساب
+                                                                </label>
+                                                                <input type="number" class="form-control" id="input1">
+                                                            </div>
+                                                            <div class="myDivs" id="myDiv"></div>
 
                                                         </div>
 
@@ -802,6 +804,53 @@
                 }
             }
         });
+
+
+        var input1 = document.getElementById('input1');
+        var myDiv = document.getElementById('myDiv');
+        var previousValue = 0;
+
+
+        input1.addEventListener('input', function () {
+            var inputValue = parseInt(input1.value);
+
+            if (isNaN(inputValue) || inputValue <= 0) {
+                alert("Please enter a valid positive number.");
+                return;
+            }
+            var oldDivs = myDiv.getElementsByClassName('myDiv');
+            var oldDivsCount = oldDivs.length;
+
+            while (oldDivsCount > inputValue) {
+                myDiv.removeChild(oldDivs[oldDivsCount - 1]);
+                oldDivsCount--;
+            }
+
+
+
+            for (var i = oldDivsCount; i < inputValue; i++) {
+                var newDiv = document.createElement('div');
+                newDiv.className = 'myDiv';
+
+                var newLabel = document.createElement('label');
+                newLabel.textContent = 'Input ' + (i + 1) + ': ';
+                newLabel.className = "form-label"
+                newDiv.appendChild(newLabel);
+
+                var newInput = document.createElement('input');
+                newInput.type = 'number';
+                newInput.className = "form-control"
+
+                newDiv.appendChild(newInput);
+
+                myDiv.appendChild(newDiv);
+            }
+            previousValue = inputValue;
+
+        });
+
+
+
 
 
         function checkAndFocus() {

@@ -65,6 +65,8 @@ body {
     transition: transform 0.3s ease;
 }
 
+
+
 .BG1 nav ul li:hover::after {
     transform: scaleX(1);
 }
