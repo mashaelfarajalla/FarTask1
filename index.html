@@ -652,7 +652,7 @@
             <div class="container my-5">
                 <div class="row">
 
-                    <h3 class="" style="margin-top: 90px;">البنوك الأعضاء</h3>
+                    <h2 class="h2swiper" style="margin-top: 90px;">البنوك الأعضاء</h2>
 
                     <div class="swiper mySwiper mt-5">
                         <div class="swiper-wrapper ">
@@ -928,6 +928,7 @@
             var owner = document.getElementById('owner')
             if (owner.value != "1" && owner.value != 2) {
                 alert("الرجاء نوع الحساب");
+                owner.focus();
 
             }
             else {
@@ -948,7 +949,7 @@
                 else {
                     if (input4.value < input5.value) {
                         alert("الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح");
-
+                        input5.focus();
                     }
                     else {
                         if (document.getElementById('numbersubscribersaccount').style.display == 'flex') {
@@ -986,11 +987,23 @@
 
                         }
                         else {
-                            input3.value = 0;
-                            input4.value = 0;
-                            input5.value = 0;
-                            input6.value = 0;
-                            AddTable();
+                            if (input3.value === "") {
+                                input3.value = 0;
+
+                            }
+                            if (input4.value === "") {
+                                input4.value = 0;
+
+                            } if (input5.value === "") {
+                                input5.value = 0;
+
+                            } if (input6.value === "") {
+                                input6.value = 0;
+
+                            }
+                            else {
+                                AddTable();
+                            }
                         }
 
 

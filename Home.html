@@ -15,6 +15,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="icon" href="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -311,16 +314,15 @@
 
 
         <div style="background: #E7F2F3;">
-            <div class="container my-5">
+            <div class="container my-5 ">
                 <div class="row">
 
-                    <h3 class="" style="margin-top: 90px;">البنوك الأعضاء</h3>
+                    <h3 class="h2swiper mt-5">البنوك الأعضاء</h3>
 
                     <div class="swiper mySwiper mt-5">
                         <div class="swiper-wrapper ">
                             <div class="swiper-slide" style="margin-right: 60px;"><img src="assets/images/1.png"
-                                    class="img-fluid">
-                            </div>
+                                    class="img-fluid"></div>
                             <div class="swiper-slide"><img src="assets/images/2.png" class="img-fluid">
                             </div>
                             <div class="swiper-slide"><img src="assets/images/3.png" class="img-fluid">
@@ -339,7 +341,6 @@
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
-
                 </div>
             </div>
 
@@ -349,15 +350,9 @@
                     <div class="row justify-content-evenly">
                         <div class="col-lg-auto col-md-12  mb-4">
                             <div class="d-flex align-items-center">
-                                <img style="width: 110px; height:117px ;"
-                                    src=" assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png">
-                                <div class="mx-2">
-                                    <h4 class="mb-1">المؤسسة الفلسطينية لضمان الودائع</h4>
-                                    <h4>
-                                        Palestinian Deposit Insurance Corporation
-                                    </h4>
+                                <img style="width: 307px; height:74px ;"
+                                    src="assets/images/logo-4-removebg-preview.png">
 
-                                </div>
                             </div>
                             <div class="p mt-3">
                                 <p>مبنى سلطة النقد</p>
@@ -465,9 +460,6 @@
 
         </div>
     </div>
-
-
-
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -475,6 +467,7 @@
 
 
     <script>
+
         $(document).ready(function () {
             $(window).scroll(function () {
                 if ($(window).scrollTop() > 50) {
@@ -488,10 +481,15 @@
         });
 
         var swiper = new Swiper(".mySwiper", {
-            // loop: true,
+            loop: true,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false
+
             },
 
             slidesPerView: 1,
@@ -515,7 +513,7 @@
                 },
                 992: {
                     slidesPerView: 6,
-                    spaceBetween: 10
+                    spaceBetween: 5
                 }
             }
         });

@@ -187,6 +187,13 @@ label:hover .tooltip2 {
     height: 100px;
 } */
 
+.h2swiper {
+    color: #027b87;
+    font-weight: 700;
+    font-size: 1.6em;
+    line-height: 1.3;
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
     font-size: 29px !important;

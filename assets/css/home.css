@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Noto+Sans+Arabic&family=Tajawal:wght@400;500;700&display=swap');
 
 body {
-    /* background-color: white; */
+    background-color: white;
     font-family: "Tajawal", sans-serif;
 }
 
@@ -217,6 +217,41 @@ body {
     color: #666 !important;
 }
 
+.mySwiper .img-fluid {
+
+    max-width: 157px !important;
+    height: 67px !important;
+    filter: grayscale(100%);
+}
+
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+
+    display: none;
+
+
+
+}
+
+.mySwiper .swiper-button-prev::after,
+.mySwiper .swiper-button-next::after {
+    font-size: 20px !important;
+    color: black;
+    font-weight: bold;
+}
+
+.mySwiper:hover {
+    cursor: pointer;
+}
+
+/* .mySwiper:hover .swiper-button-prev,
+.mySwiper:hover .swiper-button-next {
+    display: block;
+} */
+
+.mySwiper .img-fluid:hover {
+    filter: grayscale(0);
+}
 
 footer {
     background: #E7F2F3;
