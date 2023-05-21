@@ -49,19 +49,11 @@
 
                 }
             }
+
         }
 
 
-        function ChangeState() {
-            var owner = document.getElementById('owner')
-            if (owner.value == "2") {
-                document.getElementById('numbersubscribersaccount').style.display = "flex"
 
-            }
-            else {
-                document.getElementById('numbersubscriberssaccount').style.display = "none"
-            }
-        }
 
         function ChangeState2() {
             var company = document.getElementById('company')
@@ -85,12 +77,33 @@
             }
         }
 
+        function hideelement() {
+            var radios = document.getElementsByName("flexRadioDefault");
+            var input = document.getElementsByClassName("form-control")
+
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    radios[i].checked = !radios[i].checked;
+                    document.getElementById("show1").style.display = "none";
+
+                    document.getElementById("show2").style.display = "none";
+                    document.getElementById("show3").style.display = "none";
+                }
+            }
+
+            for (var i = 0; i < input.length; i++) {
+                input[i].value = "";
+            }
+        }
+
         function btn1() {
             let collapseOne = document.getElementById('collapseOne')
             let collapseTwo = document.getElementById('collapseTwo')
+            hideelement();
 
-            console.log("click");
-            console.log(collapseOne)
+
+
+
             collapseOne.classList.add('show')
             collapseTwo.classList.remove('show')
             let banks = document.getElementById("banks");
@@ -102,9 +115,7 @@
         function btn2() {
             let collapseOne = document.getElementById('collapseOne')
             let collapseTwo = document.getElementById('collapseTwo')
-
-            console.log("click");
-            console.log(collapseOne)
+            hideelement();
             collapseOne.classList.add('show')
             collapseTwo.classList.remove('show')
             let banks = document.getElementById("banks");
@@ -140,39 +151,56 @@
 
 
             }, 200);
+
+
+
+            var div = "<div class='divtable'>";
+            setTimeout(() => {
+                div += "<p>";
+                div += "مجموع الودائع";
+                div += "<span>00</span>";
+                div += "</p>";
+                div += "<p>";
+                div += " صافي القروض	";
+                div += "<span>00</span>";
+                div += "</p>";
+                div += "<p>";
+                div += "قيمة الضمان	";
+                div += "<span>00</span>";
+                div += "</p>";
+
+                document.getElementById('table2').innerHTML = div;
+
+            }, 200)
+
+            var div2 = "<table class='table'>";
+            setTimeout(() => {
+                div2 += "<thead>";
+                div2 += "<tr>";
+                div2 += "<td>" + ' الاسم	' + "</td>";
+                div2 += "<td>" + ' الوديعه' + "</td>";
+                div2 += "<td>" + 'الضمان ' + "</td>";
+                div2 += "</tr>";
+                div2 += "</thead>";
+                for (i = 0; i < data.length; i++) {
+                    div2 += "<tr>";
+                    div2 += "<td>" + data[i].name + "</td>";
+                    div2 += "<td>" + (data[i].Number1 + data[i].Number3) + "</td>";
+                    div2 += "<td>" + data[i].Number2 + "</td>";
+                    div2 += "</tr>";
+
+                }
+                html += "</table>";
+
+                document.getElementById('table3').innerHTML = div2
+
+
+            }, 200);
+
+
+
         }
         displaydatatable();
-
-        // function AddTable() {
-
-        //     var input2 = document.getElementById('input2');
-        //     var input3 = document.getElementById('input3').value;
-        //     var input4 = document.getElementById('input4').value;
-        //     var input5 = document.getElementById('input5').value;
-        //     var input6 = document.getElementById('input6').value;
-        //     // var input7 = document.getElementById('input7').value;
-
-        //     if (input2.value === "") {
-        //         alert("الرجاء اضافة اسم تعريفي للحساب");
-        //         setTimeout(function () {
-        //             input2.focus();
-        //         }, 100);
-
-
-
-        //     }
-
-        //     // document.getElementById('input3').value = 0;
-        //     // input3.value = 0;
-        //     // input4.value = 0;
-        //     // input5.value = 0;
-        //     // input6.value = 0;
-        //     // let collapseOne = document.getElementById('collapseOne')
-        //     // let collapseTwo = document.getElementById('collapseTwo')
-        //     // collapseTwo.classList.add('show')
-        //     // collapseOne.classList.remove('show')
-
-        // }
 
 
     </script>
@@ -370,7 +398,7 @@
                                                 </div>
                                             </div>
                                             <div id="show1">
-                                                <form>
+                                                <form id="formsumbit">
                                                     <div>
                                                         <h3>حسابات الافراد
                                                         </h3>
@@ -383,13 +411,14 @@
                                                                 <option value="2"> مشترك </option>
                                                             </select>
                                                         </div>
-                                                        <div class="mb-2  mt-5">
-                                                            <div id="numbersubscribersaccount">
+                                                        <div class="mb-2  mt-5  flex-column"
+                                                            id="numbersubscribersaccount">
+                                                            <div class="d-flex">
                                                                 <label for="input1" class="form-label">عدد
                                                                     المشتركين في
                                                                     الحساب
                                                                 </label>
-                                                                <input type="number" class="form-control" id="input1">
+                                                                <input type="number" class="form-control " id="input1">
                                                             </div>
                                                             <div class="myDivs" id="myDiv"></div>
 
@@ -461,10 +490,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <button type="reset" onclick="checkAndFocus()"
-                                                        class="btn btn-secondary">أضف
-
-                                                        أضافة للتقرير</button>
+                                                    <input type="submit" class="btn btn-secondary" value=" أضف للتقرير">
                                                 </form>
                                             </div>
                                             <div id="show2">
@@ -589,6 +615,13 @@
                                         <div class="accordion-body">
                                             <div id="table" class="row justify-content-center">
 
+                                            </div>
+                                            <div id="table2" class="row justify-content-center">
+
+                                            </div>
+                                            <div id="table3" class="row justify-content-center border-top">
+                                                <h3> المشتركين الاخرون
+                                                </h3>
                                             </div>
                                             <div>
                                                 <button type="reset" onclick="btn1()" class="btn btn-secondary">أضف حساب
@@ -772,6 +805,23 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script>
+        var owner = document.getElementById('owner')
+
+        function ChangeState() {
+            if (owner.value == "2") {
+                document.getElementById('numbersubscribersaccount').style.display = "flex";
+                document.getElementById("table3").style.display = "block";
+
+            }
+            else {
+                document.getElementById('numbersubscribersaccount').style.display = "none";
+                document.getElementById("table3").style.display = "none";
+
+            }
+        }
+
+
+
         var swiper = new Swiper(".mySwiper", {
             // loop: true,
             navigation: {
@@ -805,6 +855,24 @@
             }
         });
 
+        const input2 = document.getElementById('input2');
+        const input3 = document.getElementById('input3');
+        const input4 = document.getElementById('input4');
+        const input5 = document.getElementById('input5');
+        const input6 = document.getElementById('input6');
+
+        input5.addEventListener("input", function () {
+
+            setTimeout(() => {
+                if (input4.value < input5.value) {
+                    alert("الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح");
+                }
+            }, 1000)
+
+
+        })
+
+
 
         var input1 = document.getElementById('input1');
         var myDiv = document.getElementById('myDiv');
@@ -833,13 +901,13 @@
                 newDiv.className = 'myDiv';
 
                 var newLabel = document.createElement('label');
-                newLabel.textContent = 'Input ' + (i + 1) + ': ';
+                newLabel.textContent = 'المالك ' + (i + 1) + ': ';
                 newLabel.className = "form-label"
                 newDiv.appendChild(newLabel);
 
                 var newInput = document.createElement('input');
-                newInput.type = 'number';
-                newInput.className = "form-control"
+                newInput.type = 'text';
+                newInput.className = "form-control myinput"
 
                 newDiv.appendChild(newInput);
 
@@ -849,35 +917,130 @@
 
         });
 
+        var inputs = document.getElementsByClassName("myinput");
+        var currentInputIndex = 0;
+        let formsumbit = document.querySelector("#formsumbit");
+        formsumbit.addEventListener("submit", function (e) {
+            e.preventDefault();
 
 
-
-
-        function checkAndFocus() {
-            const input2 = document.getElementById('input2');
-            const input3 = document.getElementById('input3').value;
-            const input4 = document.getElementById('input4').value;
-            const input5 = document.getElementById('input5').value;
-            const input6 = document.getElementById('input6').value;
-
-            if (input2.value === "") {
-                alert("الرجاء إضافة اسم تعريفي للحساب");
-                setTimeout(function () {
-
-                    input2.focus();
-                }, 100);
-
+            var owner = document.getElementById('owner')
+            if (owner.value != "1" && owner.value != 2) {
+                alert("الرجاء نوع الحساب");
 
             }
-            // if (input3.value === '') {
-            //     input3.value = 0
-            // }
-
             else {
-                // القم بأي إجراء آخر إذا كان هناك سلوك آخر بعد التحقق من الحقل
-                AddTable();
+                if (input2.value === "") {
+                    alert("الرجاء إضافة اسم تعريفي للحساب");
+                    setTimeout(function () {
+
+                        input2.focus();
+
+                        input3.value = 0;
+                        input4.value = 0;
+                        input5.value = 0;
+                        input6.value = 0;
+                    }, 100);
+
+                }
+
+                else {
+                    if (input4.value < input5.value) {
+                        alert("الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح");
+
+                    }
+                    else {
+                        if (document.getElementById('numbersubscribersaccount').style.display == 'flex') {
+                            if (input1.value === "") {
+                                alert("  أدخل عدد المشركين ");
+                                setTimeout(function () {
+                                    input1.focus();
+
+                                }, 100);
+                            }
+                            else {
+                                if (currentInputIndex < inputs.length) {
+                                    var currentInput = inputs[currentInputIndex];
+
+                                    if (currentInput.value === "") {
+                                        alert("أدخل أسم المالك");
+                                        setTimeout(function () {
+                                            inputs[currentInputIndex - 1].focus();
+
+                                        }, 100);
+                                    }
+
+                                    currentInputIndex++;
+                                } else {
+                                    input3.value = 0;
+                                    input4.value = 0;
+                                    input5.value = 0;
+                                    input6.value = 0;
+                                    AddTable();
+
+
+
+                                }
+                            }
+
+                        }
+                        else {
+                            input3.value = 0;
+                            input4.value = 0;
+                            input5.value = 0;
+                            input6.value = 0;
+                            AddTable();
+                        }
+
+
+                    }
+
+
+                }
+
+
+
+
+
             }
-        }
+
+        })
+
+
+        // function checkAndFocus(e) {
+        //     e.preventDefault()
+        //     const input2 = document.getElementById('input2');
+        //     const input3 = document.getElementById('input3').value;
+        //     const input4 = document.getElementById('input4').value;
+        //     const input5 = document.getElementById('input5').value;
+        //     const input6 = document.getElementById('input6').value;
+
+
+
+        //     var owner = document.getElementById('owner')
+        //     if (owner.value != "1" && owner.value != 2) {
+        //         alert("الرجاء نوع الحساب");
+
+        //     }
+        //     else {
+        //         if (input2.value === "") {
+        //             alert("الرجاء إضافة اسم تعريفي للحساب");
+        //             setTimeout(function () {
+
+        //                 input2.focus();
+        //             }, 100);
+
+        //         }
+
+        //         else {
+        //             AddTable();
+        //         }
+
+        //     }
+
+
+
+        // }
 
 
         function AddTable() {
@@ -894,10 +1057,7 @@
             data.push({ id: id, name: input2, Number1: parseInt(input3), Number2: parseInt(input5), Number3: parseInt(input6) })
 
             displaydatatable();
-            // input3.value = 0;
-            // input4.value = 0;
-            // input5.value = 0;
-            // input6.value = 0;
+
             let collapseOne = document.getElementById('collapseOne');
             let collapseTwo = document.getElementById('collapseTwo');
             collapseTwo.classList.add('show');
