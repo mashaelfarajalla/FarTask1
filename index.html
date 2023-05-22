@@ -18,42 +18,6 @@
 
     <script type="text/javascript">
 
-        function handleRadioChange() {
-            var radios = document.getElementsByName("flexRadioDefault");
-
-            for (var i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
-                    console.log("Selected radio value: " + radios[i].id);
-
-                    if (radios[i].id == "flexRadioDefault1") {
-                        document.getElementById("show1").style.display = "block";
-                        document.getElementById("show2").style.display = "none";
-                        document.getElementById("show3").style.display = "none";
-
-                    }
-                    else if (radios[i].id == "flexRadioDefault2") {
-                        document.getElementById("show2").style.display = "block";
-                        document.getElementById("show1").style.display = "none";
-                        document.getElementById("show3").style.display = "none";
-
-
-                    }
-                    else {
-                        document.getElementById("show2").style.display = "none";
-                        document.getElementById("show1").style.display = "none";
-                        document.getElementById("show3").style.display = "block";
-
-                    }
-                    break; // Exit the loop when a selected radio is found
-
-
-
-                }
-            }
-
-        }
-
-
 
 
         function ChangeState2() {
@@ -114,6 +78,7 @@
 
         }
         function btn2() {
+            data = []
             let collapseOne = document.getElementById('collapseOne')
             let collapseTwo = document.getElementById('collapseTwo')
             hideelement();
@@ -127,81 +92,6 @@
 
         }
 
-        let data = [{ id: 1, name: "mase", Number1: 3, Number2: 2, Number3: 5 }]
-        function displaydatatable() {
-            var html = "<table class='table'>";
-            setTimeout(() => {
-                html += "<thead>";
-                html += "<tr>";
-                html += "<td>" + 'اسم الحساب' + "</td>";
-                html += "<td>" + ' الودائع' + "</td>";
-                html += "<td>" + 'القروض ' + "</td>";
-                html += "</tr>";
-                html += "</thead>";
-                for (i = 0; i < data.length; i++) {
-                    html += "<tr>";
-                    html += "<td>" + data[i].name + "</td>";
-                    html += "<td>" + (data[i].Number1 + data[i].Number3) + "</td>";
-                    html += "<td>" + data[i].Number2 + "</td>";
-                    html += "</tr>";
-
-                }
-                html += "</table>";
-
-                document.getElementById('table').innerHTML = html
-
-
-            }, 200);
-
-
-
-            var div = "<div class='divtable'>";
-            setTimeout(() => {
-                div += "<p>";
-                div += "مجموع الودائع";
-                div += "<span>00</span>";
-                div += "</p>";
-                div += "<p>";
-                div += " صافي القروض	";
-                div += "<span>00</span>";
-                div += "</p>";
-                div += "<p>";
-                div += "قيمة الضمان	";
-                div += "<span>00</span>";
-                div += "</p>";
-
-                document.getElementById('table2').innerHTML = div;
-
-            }, 200)
-
-            var div2 = "<table class='table'>";
-            setTimeout(() => {
-                div2 += "<thead>";
-                div2 += "<tr>";
-                div2 += "<td>" + ' الاسم	' + "</td>";
-                div2 += "<td>" + ' الوديعه' + "</td>";
-                div2 += "<td>" + 'الضمان ' + "</td>";
-                div2 += "</tr>";
-                div2 += "</thead>";
-                for (i = 0; i < data.length; i++) {
-                    div2 += "<tr>";
-                    div2 += "<td>" + data[i].name + "</td>";
-                    div2 += "<td>" + (data[i].Number1 + data[i].Number3) + "</td>";
-                    div2 += "<td>" + data[i].Number2 + "</td>";
-                    div2 += "</tr>";
-
-                }
-                html += "</table>";
-
-                document.getElementById('table3').innerHTML = div2
-
-
-            }, 200);
-
-
-
-        }
-        displaydatatable();
 
 
     </script>
@@ -495,102 +385,109 @@
                                                 </form>
                                             </div>
                                             <div id="show2">
-                                                <div>
-                                                    <h3>حسابات الشركات
-                                                    </h3>
-                                                    <div class="d-flex align-items-center">
-                                                        <label class="" for="company">نوع الشركة</label>
-                                                        <select name="company" onchange="ChangeState2()"
-                                                            class="form-select" id="company">
-                                                            <option selected>اختر ...</option>
-                                                            <option value="1">تأمين أو وساطه </option>
-                                                            <option value="2"> أخرى </option>
-                                                        </select>
-                                                    </div>
 
+                                                <h3>حسابات الشركات
+                                                </h3>
+                                                <div class="d-flex align-items-center">
+                                                    <label class="" for="company">نوع الشركة</label>
+                                                    <select name="company" onchange="ChangeState2()" class="form-select"
+                                                        id="company">
+                                                        <option selected>اختر ...</option>
+                                                        <option value="1">تأمين أو وساطه </option>
+                                                        <option value="2"> أخرى </option>
+                                                    </select>
                                                 </div>
                                                 <div id="showsection1" class="mt-5">
-                                                    <div>
-                                                        <div class="mb-2 d-flex mt-5">
-                                                            <label for="name" class="form-label">اسم تعريفي
-                                                                للحساب</label>
-                                                            <input type="text" class="form-control" id="name">
-
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="account" class="form-label">رصيد
-                                                                الحساب</label>
-                                                            <input type="number" class="form-control" id="account"
-                                                                aria-describedby="accountlHelp">
-                                                            <div id="accountlHelp" class="form-text mx-2">
-                                                                (أدخل
-                                                                القيمه بالأرقام بعملة الدولار )
+                                                    <form id="formsumbit2">
+                                                        <div>
+                                                            <div class="mb-2 d-flex mt-5">
+                                                                <label for="input22" class="form-label">اسم تعريفي
+                                                                    للحساب</label>
+                                                                <input type="text" class="form-control" id="input22">
 
                                                             </div>
-                                                        </div>
-
-
-
-                                                    </div>
-                                                    <div class="mt-5">
-                                                        <h3>القروض و الكفالات
-                                                        </h3>
-                                                        <div class="mb-2 mt-5">
-                                                            <div class=" d-flex">
-                                                                <label for="loanamount" class="form-label">
-                                                                    قيمة القرض الممنوح</label>
-                                                                <input type="number" class="form-control"
-                                                                    id="loanamount" aria-describedby="loanamountlHelp">
-                                                                <div id="loanamountlHelp" class="form-text mx-2">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="input23" class="form-label">رصيد
+                                                                    الحساب</label>
+                                                                <input type="number" class="form-control" id="input23"
+                                                                    aria-describedby="accountlHelp">
+                                                                <div id="accountlHelp" class="form-text mx-2">
                                                                     (أدخل
                                                                     القيمه بالأرقام بعملة الدولار )
 
                                                                 </div>
                                                             </div>
-                                                            <div id="" class="form-text mx-2 mb-3">
-                                                                ( على افتراض أن القرض يخص المالك الاول)
 
+
+
+                                                        </div>
+                                                        <div class="mt-5">
+                                                            <h3>القروض و الكفالات
+                                                            </h3>
+                                                            <div class="mb-2 mt-5">
+                                                                <div class=" d-flex">
+                                                                    <label for="input24" class="form-label">
+                                                                        قيمة القرض الممنوح</label>
+                                                                    <input type="number" class="form-control"
+                                                                        id="input24" aria-describedby="loanamountlHelp">
+                                                                    <div id="loanamountlHelp" class="form-text mx-2">
+                                                                        (أدخل
+                                                                        القيمه بالأرقام بعملة الدولار )
+
+                                                                    </div>
+                                                                </div>
+                                                                <div id="" class="form-text mx-2 mb-3">
+                                                                    ( على افتراض أن القرض يخص المالك الاول)
+
+
+                                                                </div>
 
                                                             </div>
 
-                                                        </div>
 
+                                                            <div class="mb-2 d-flex">
+                                                                <label for="input25" class="form-label">
+                                                                    رصيد القرض القائم</label>
+                                                                <input type="number" class="form-control" id="input25"
+                                                                    aria-describedby="loanbalanceHelp">
+                                                                <div id="loanbalanceHelp" class="form-text mx-2">
+                                                                    (أدخل
+                                                                    القيمه بالأرقام بعملة الدولار )
 
-                                                        <div class="mb-2 d-flex">
-                                                            <label for="loanbalance" class="form-label">
-                                                                رصيد القرض القائم</label>
-                                                            <input type="number" class="form-control" id="loanbalance"
-                                                                aria-describedby="loanbalanceHelp">
-                                                            <div id="loanbalanceHelp" class="form-text mx-2">
-                                                                (أدخل
-                                                                القيمه بالأرقام بعملة الدولار )
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 d-flex">
+                                                                <label for="input26" class="form-label">
+                                                                    قيمة التأمينات النقديه على القرض</label>
+                                                                <input type="number" class="form-control" id="input26"
+                                                                    aria-describedby="securityloanHelp">
+                                                                <div id="securityloanHelp" class="form-text mx-2">
+                                                                    (أدخل
+                                                                    القيمه بالأرقام بعملة الدولار )
 
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="mb-2 d-flex">
-                                                            <label for="securityloan" class="form-label">
-                                                                قيمة التأمينات النقديه على القرض</label>
-                                                            <input type="number" class="form-control" id="securityloan"
-                                                                aria-describedby="securityloanHelp">
-                                                            <div id="securityloanHelp" class="form-text mx-2">
-                                                                (أدخل
-                                                                القيمه بالأرقام بعملة الدولار )
 
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                        <input type="submit" class="btn btn-secondary"
+                                                            value=" أضف للتقرير">
+                                                    </form>
 
-                                                    <button type="reset" onclick="checkAndFocus()"
-                                                        class="btn btn-secondary">أضف
 
-                                                        أضافة للتقرير</button>
+
                                                 </div>
+
+
                                                 <div id="showsection2">
                                                     <h3 class="my-5 d-flex
-         align-items-center
-         justify-content-center">نأسف نحن لانضمن هذا النوع من الحسابات
+                                                                 align-items-center
+                                                                 justify-content-center">نأسف نحن لانضمن هذا النوع من
+                                                        الحسابات
                                                     </h3>
                                                 </div>
+
+
+
                                             </div>
                                             <div id="show3">
                                                 <h3>حسابات حكوميه
@@ -620,9 +517,7 @@
                                             <div id="table2" class="row justify-content-center">
 
                                             </div>
-                                            <div id="table3" class="row justify-content-center border-top">
-                                                <h3> المشتركين الاخرون
-                                                </h3>
+                                            <div id="table3" class="row justify-content-center">
                                             </div>
                                             <div>
                                                 <button type="reset" onclick="btn1()" class="btn btn-secondary">أضف حساب
@@ -806,6 +701,128 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script>
+        var radios = document.getElementsByName("flexRadioDefault");
+        var total1 = 0, total2 = 0, total3 = 0;
+
+        function handleRadioChange() {
+
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    console.log("Selected radio value: " + radios[i].id);
+
+                    if (radios[i].id == "flexRadioDefault1") {
+                        document.getElementById("show1").style.display = "block";
+                        document.getElementById("show2").style.display = "none";
+                        document.getElementById("show3").style.display = "none";
+
+                    }
+                    else if (radios[i].id == "flexRadioDefault2") {
+                        document.getElementById("show2").style.display = "block";
+                        document.getElementById("show1").style.display = "none";
+                        document.getElementById("show3").style.display = "none";
+
+
+                    }
+                    else {
+                        document.getElementById("show2").style.display = "none";
+                        document.getElementById("show1").style.display = "none";
+                        document.getElementById("show3").style.display = "block";
+
+                    }
+                    break; // Exit the loop when a selected radio is found
+
+
+
+                }
+            }
+
+
+
+        }
+
+        let data = [{ id: 1, name: "mase", Number1: 3, Number2: 2, Number3: 5 }]
+
+        function displaydatatable() {
+            var html = "<table class='table'>";
+            setTimeout(() => {
+                html += "<thead>";
+                html += "<tr>";
+                html += "<td>" + 'اسم الحساب' + "</td>";
+                html += "<td>" + ' الودائع' + "</td>";
+                html += "<td>" + 'القروض ' + "</td>";
+                html += "</tr>";
+                html += "</thead>";
+                for (i = 0; i < data.length; i++) {
+                    html += "<tr>";
+                    html += "<td>" + data[i].name + "</td>";
+                    html += "<td>" + (parseInt(data[i].Number1) + parseInt(data[i].Number3)) + "</td>";
+                    html += "<td>" + data[i].Number2 + "</td>";
+                    html += "</tr>";
+
+                }
+                html += "<tfoot>";
+                html += "<tr>";
+                html += "<td>" + "مجموع الودائع	" + "</td>"
+                html += "<td>" + total1 + "</td>"
+                html += "</tr>";
+                html += "<tr>";
+                html += "<td>" + "صافي القروض	" + "</td>"
+                html += "<td>" + total2 + "</td>"
+                html += "</tr>";
+                html += "<tr>";
+                html += "<td>" + "قيمة الضمان	" + "</td>"
+                html += "<td>" + total3 + "</td>"
+                html += "</tr>";
+                html += "</tfoot >"
+                html += "</table>";
+                html += "<hr/>"
+
+
+                document.getElementById('table').innerHTML = html
+
+
+            }, 200);
+
+
+
+            var div2 = "<table class='table'>";
+            setTimeout(() => {
+
+                div2 += "<thead>";
+                div2 += "<caption style='font-size: 32px;padding-top: 0.5rem;padding-bottom: 0.5rem;color: #03114c;text-align: right;font-weight: bold;width: 270px; display: flex; '>" + "المشتركين الاخرون" + "</caption > ";
+
+                div2 += "<tr>";
+                div2 += "<td>" + ' الاسم	' + "</td>";
+                div2 += "<td>" + ' الوديعه' + "</td>";
+                div2 += "<td>" + 'الضمان ' + "</td>";
+                div2 += "</tr>";
+                div2 += "</thead>";
+                for (i = 0; i < data.length; i++) {
+                    div2 += "<tr>";
+                    div2 += "<td>" + data[i].name + "</td>";
+                    div2 += "<td>" + (data[i].Number1 + data[i].Number3) + "</td>";
+                    div2 += "<td>" + data[i].Number2 + "</td>";
+                    div2 += "</tr>";
+
+                }
+                div2 += "</table>";
+
+                document.getElementById('table3').innerHTML = div2
+
+
+            }, 200);
+
+
+
+        }
+        // displaydatatable();
+
+
+
+
+
+
+
         var owner = document.getElementById('owner')
 
         function ChangeState() {
@@ -862,10 +879,30 @@
         const input5 = document.getElementById('input5');
         const input6 = document.getElementById('input6');
 
-        input5.addEventListener("input", function () {
+        const input22 = document.getElementById('input22');
+        const input23 = document.getElementById('input23');
+        const input24 = document.getElementById('input24');
+        const input25 = document.getElementById('input25');
+        const input26 = document.getElementById('input26');
+
+        input5.addEventListener("change", function () {
 
             setTimeout(() => {
-                if (input4.value < input5.value) {
+                if (input4.value >= input5.value) {
+                    console.log("done");
+                }
+                else {
+                    alert("الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح");
+
+                }
+            }, 1000)
+
+
+        })
+        input25.addEventListener("change", function () {
+
+            setTimeout(() => {
+                if (input24.value < input25.value) {
                     alert("الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح");
                 }
             }, 1000)
@@ -1021,54 +1058,104 @@
         })
 
 
-        // function checkAndFocus(e) {
-        //     e.preventDefault()
-        //     const input2 = document.getElementById('input2');
-        //     const input3 = document.getElementById('input3').value;
-        //     const input4 = document.getElementById('input4').value;
-        //     const input5 = document.getElementById('input5').value;
-        //     const input6 = document.getElementById('input6').value;
+
+        let formsumbit2 = document.querySelector("#formsumbit2");
+        formsumbit2.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            if (input22.value === "") {
+                alert("الرجاء إضافة اسم تعريفي للحساب");
+
+                setTimeout(function () {
+
+                    input22.focus();
+
+                    input23.value = 0;
+                    input24.value = 0;
+                    input25.value = 0;
+                    input26.value = 0;
+                }, 100);
+
+            }
+            else {
+
+                if (input24.value < input25.value) {
+                    alert("الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح");
+                    input5.focus();
+                }
+
+                else {
+
+                    if (input23.value === "") {
+                        input23.value = 0;
+
+                    }
+                    if (input24.value === "") {
+                        input24.value = 0;
+
+                    } if (input25.value === "") {
+                        input25.value = 0;
+
+                    } if (input26.value === "") {
+                        input26.value = 0;
+
+                    }
+                    else {
+                        console.log("add table2")
+                        AddTable();
+                    }
 
 
 
-        //     var owner = document.getElementById('owner')
-        //     if (owner.value != "1" && owner.value != 2) {
-        //         alert("الرجاء نوع الحساب");
+                }
 
-        //     }
-        //     else {
-        //         if (input2.value === "") {
-        //             alert("الرجاء إضافة اسم تعريفي للحساب");
-        //             setTimeout(function () {
 
-        //                 input2.focus();
-        //             }, 100);
-
-        //         }
-
-        //         else {
-        //             AddTable();
-        //         }
-
-        //     }
+            }
 
 
 
-        // }
 
+
+
+
+        })
 
         function AddTable() {
+            console.log("Add data table");
 
-            console.log("Add table")
-            var input2 = document.getElementById('input2').value;
-            var input3 = document.getElementById('input3').value;
-            var input4 = document.getElementById('input4').value;
-            var input5 = document.getElementById('input5').value;
-            var input6 = document.getElementById('input6').value;
 
             var id = data.length + 1;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
 
-            data.push({ id: id, name: input2, Number1: parseInt(input3), Number2: parseInt(input5), Number3: parseInt(input6) })
+                    if (radios[i].id == "flexRadioDefault1") {
+                        console.log("show1")
+                        data.push({ id: id, name: input2.value, Number1: parseInt(input3.value), Number2: parseInt(input5.value), Number3: parseInt(input6.value) })
+                    }
+                    else {
+                        console.log("show2")
+
+                        data.push({ id: id, name: input22.value, Number1: parseInt(input23.value), Number2: parseInt(input25.value), Number3: parseInt(input26.value) })
+                    }
+                    break;
+
+                }
+            }
+            // data.forEach(item => {
+            //     total1 += (item.Number1 + item.Number3);
+            //     total2 += (item.Number2);
+            //     total3 = total1 - total2
+            // });
+
+            total1 = data.reduce((total, item) => {
+                return total + (parseInt(item.Number1) + parseInt(item.Number3))
+            }, 0);
+            total2 = data.reduce((total, item) => {
+                return total + parseInt(item.Number2)
+            }, 0);
+            total3 = data.reduce((total, item) => {
+                return (parseInt(total1) - parseInt(total2))
+            }, 0);
 
             displaydatatable();
 
@@ -1078,6 +1165,25 @@
             collapseOne.classList.remove('show');
 
         }
+
+        function btn2() {
+            data.length = 0;
+            total1 = 0, total2 = 0, total3 = 0
+            displaydatatable();
+
+            let collapseOne = document.getElementById('collapseOne')
+            let collapseTwo = document.getElementById('collapseTwo')
+            hideelement();
+            collapseOne.classList.add('show')
+            collapseTwo.classList.remove('show')
+            let banks = document.getElementById("banks");
+
+            banks.disabled = false;
+
+
+
+        }
+
 
 
 

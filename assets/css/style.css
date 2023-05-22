@@ -11,6 +11,16 @@ body {
     display: flex;
 }
 
+table td {
+    width: 300px;
+
+}
+
+
+table tfoot td {
+    font-size: 20px;
+    font-weight: bold;
+}
 
 select:disabled {
     color: -internal-light-dark(graytext, rgb(170, 170, 170));
