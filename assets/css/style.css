@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Noto+Sans+Arabic&display=swap');
 
 body {
-    background: #E7F2F3;
+    /* background: #E7F2F3; */
     color: #000000;
     font-family: 'Cairo';
     font-weight: 400;
@@ -192,10 +192,59 @@ label:hover .tooltip2 {
     background-color: #d9d8d8;
 }
 
-/* .mySwiper img {
-    width: 100px;
-    height: 100px;
-} */
+
+.imgfooter {
+    position: relative;
+    margin-top: 110px;
+    ;
+}
+
+.imgfooter svg {
+    position: absolute;
+    bottom: 0;
+    height: 96px;
+    fill: rgba(2, 123, 135, 0.099);
+    width: 100%;
+
+}
+
+.mySwiper .img-fluid {
+
+    max-width: 157px !important;
+    height: 67px !important;
+    filter: grayscale(100%);
+}
+
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+    display: none;
+
+}
+
+.mySwiper .swiper-button-prev::after,
+.mySwiper .swiper-button-next::after {
+    font-size: 20px !important;
+    color: black;
+    font-weight: bold;
+}
+
+.mySwiper:hover {
+    cursor: pointer;
+}
+
+
+
+.mySwiper .img-fluid:hover {
+    filter: grayscale(0);
+}
+
+footer {
+    font-family: "Tajawal", sans-serif;
+    background: #E7F2F3;
+
+}
+
+
 
 .h2swiper {
     color: #027b87;
@@ -210,6 +259,8 @@ label:hover .tooltip2 {
     color: black;
 }
 
+
+
 footer h4 {
     font-weight: 700;
     font-size: 14px;
@@ -222,38 +273,46 @@ footer h5 {
     font-weight: 700;
     font-family: "Tajawal", sans-serif;
     font-size: 1.125em;
-    /* line-height: 56px; */
     text-rendering: optimizeSpeed;
 
 }
 
 footer ul li i {
     color: #6D6D6D;
+    font-size: 12px;
+    ;
+    margin-left: 10px;
 }
 
 footer .p p {
-    font-size: 18px;
-    line-height: 26px;
-    color: #979797;
+    font-size: 1rem;
+    line-height: .85 !important;
+    ;
+
+    color: #777777;
+    ;
 }
 
 footer .links p {
-    color: #6D6D6D;
+    color: #777777;
     font-weight: 500;
-    font-size: 30px;
-    line-height: 56px;
+    margin-bottom: 0 !important;
+    font-size: 16px;
 }
 
 footer .links i {
-    color: #6D6D6D;
-    font-size: 30px;
+    color: #777777;
+    font-size: 15px;
+    line-height: 56px;
 }
 
 footer ul li a {
-    color: #535353;
+    color: #777777;
     text-decoration: none;
     font-size: 90%;
+
 }
+
 
 footer ul li {
     border-bottom: 1px solid #ececec;
