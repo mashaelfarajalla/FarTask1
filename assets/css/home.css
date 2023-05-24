@@ -136,7 +136,7 @@ html {
 } */
 
 
-.BG1 nav ul li.nav-item::after {
+.BG1 nav .navbar-nav li.nav-item::after {
     content: "";
     position: absolute;
     top: 0;
