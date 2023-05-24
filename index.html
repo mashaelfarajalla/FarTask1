@@ -16,7 +16,7 @@
     <link rel="icon" href="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png">
 
 
-    <script type="text/javascript">
+    <script>
 
 
 
@@ -105,7 +105,7 @@
             <div class="container" style="border-bottom: 1px solid black;">
                 <a class="navbar-brand" href="#"><img style="
             width: 98px;
-    height: 96px;" src="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png"></a>
+    height: 96px;" alt=".." src="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -132,11 +132,11 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 تشريعات
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li>
@@ -149,11 +149,11 @@
                             <a class="nav-link" href="#">الاصدارات</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 ضمان الودائع
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li>
@@ -220,7 +220,7 @@
                                                     </select>
                                                 </div>
                                                 <div class="row align-items-center my-3">
-                                                    <label class="lable-title" for=""> وصف حساب</label>
+                                                    <label class="lable-title"> وصف حساب</label>
 
                                                     <div class="row d-flex justify-content-evenly">
                                                         <div class="col-md-6 col-lg-auto form-check postion">
@@ -229,12 +229,12 @@
                                                                 onchange="handleRadioChange()">
                                                             <label class="form-check-label" for="flexRadioDefault1">
                                                                 حساب أفراد
-                                                                <div class="tooltip2">
+                                                                <span class="tooltip2">
                                                                     <p> هو حساب ودائع الذي تعود مليكته للأفراد، ويشمل:
                                                                         الحساب
                                                                         الفردي و الحساب المشترك
                                                                     </p>
-                                                                </div>
+                                                                </span>
                                                             </label>
 
                                                         </div>
@@ -244,12 +244,12 @@
                                                                 onchange="handleRadioChange()">
                                                             <label class="form-check-label" for="flexRadioDefault2">
                                                                 حساب شركات
-                                                                <div class="tooltip2">
+                                                                <span class="tooltip2">
                                                                     <p> حساب الشركات: هو حساب للودائع التي تخص كافة
                                                                         أنواع
                                                                         الشركات او الجمعيات.
                                                                     </p>
-                                                                </div>
+                                                                </span>
 
                                                             </label>
                                                         </div>
@@ -260,7 +260,7 @@
                                                             <label class="form-check-label" for="flexRadioDefault3">
                                                                 حساب حكومي
 
-                                                                <div class="tooltip2">
+                                                                <span class="tooltip2">
                                                                     <p>الحساب الحكومي: هي حسابات تعود ملكيتها للقطاع
                                                                         العام
                                                                         مثل
@@ -268,7 +268,7 @@
                                                                         الحسابات لا
                                                                         يدخل ضمن
                                                                         نظام ضمان الودائع للمؤسسة.</p>
-                                                                </div>
+                                                                </span>
                                                             </label>
                                                         </div>
                                                         <div class="col-md-6 col-lg-auto form-check postion">
@@ -277,12 +277,12 @@
                                                                 onchange="handleRadioChange()">
                                                             <label class="form-check-label" for="flexRadioDefault4">
                                                                 حساب ذوي الصله
-                                                                <div class="tooltip2">
+                                                                <span class="tooltip2">
                                                                     <p> "هو الشخص الطبيعي او المعنوي الذي تربطه علاقة
                                                                         بالمصرف
                                                                         مثل عضو مجلس إدارة او مستشار للبنك ..الخ
                                                                     </p>
-                                                                </div>
+                                                                </span>
                                                             </label>
                                                         </div>
                                                     </div>
@@ -349,7 +349,7 @@
 
                                                                 </div>
                                                             </div>
-                                                            <div id="" class="form-text mx-2 mb-3">
+                                                            <div class="form-text mx-2 mb-3">
                                                                 ( على افتراض أن القرض يخص المالك الاول)
 
 
@@ -410,8 +410,8 @@
                                                                 <label for="input23" class="form-label">رصيد
                                                                     الحساب</label>
                                                                 <input type="number" class="form-control" id="input23"
-                                                                    aria-describedby="accountlHelp">
-                                                                <div id="accountlHelp" class="form-text mx-2">
+                                                                    aria-describedby="accountlHelp2">
+                                                                <div id="accountlHelp2" class="form-text mx-2">
                                                                     (أدخل
                                                                     القيمه بالأرقام بعملة الدولار )
 
@@ -429,14 +429,15 @@
                                                                     <label for="input24" class="form-label">
                                                                         قيمة القرض الممنوح</label>
                                                                     <input type="number" class="form-control"
-                                                                        id="input24" aria-describedby="loanamountlHelp">
-                                                                    <div id="loanamountlHelp" class="form-text mx-2">
+                                                                        id="input24"
+                                                                        aria-describedby="loanamountlHelp2">
+                                                                    <div id="loanamountlHelp2" class="form-text mx-2">
                                                                         (أدخل
                                                                         القيمه بالأرقام بعملة الدولار )
 
                                                                     </div>
                                                                 </div>
-                                                                <div id="" class="form-text mx-2 mb-3">
+                                                                <div class="form-text mx-2 mb-3">
                                                                     ( على افتراض أن القرض يخص المالك الاول)
 
 
@@ -449,8 +450,8 @@
                                                                 <label for="input25" class="form-label">
                                                                     رصيد القرض القائم</label>
                                                                 <input type="number" class="form-control" id="input25"
-                                                                    aria-describedby="loanbalanceHelp">
-                                                                <div id="loanbalanceHelp" class="form-text mx-2">
+                                                                    aria-describedby="loanbalanceHelp2">
+                                                                <div id="loanbalanceHelp2" class="form-text mx-2">
                                                                     (أدخل
                                                                     القيمه بالأرقام بعملة الدولار )
 
@@ -460,8 +461,8 @@
                                                                 <label for="input26" class="form-label">
                                                                     قيمة التأمينات النقديه على القرض</label>
                                                                 <input type="number" class="form-control" id="input26"
-                                                                    aria-describedby="securityloanHelp">
-                                                                <div id="securityloanHelp" class="form-text mx-2">
+                                                                    aria-describedby="securityloanHelp2">
+                                                                <div id="securityloanHelp2" class="form-text mx-2">
                                                                     (أدخل
                                                                     القيمه بالأرقام بعملة الدولار )
 
@@ -570,21 +571,21 @@
 
                     <div class="swiper mySwiper mt-5">
                         <div class="swiper-wrapper ">
-                            <div class="swiper-slide" style="margin-right: 60px;"><img src="assets/images/1.png"
-                                    class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="assets/images/2.png" class="img-fluid">
+                            <div class="swiper-slide" style="margin-right: 60px;"><img alt="..."
+                                    src="assets/images/1.png" class="img-fluid"></div>
+                            <div class="swiper-slide"><img alt="..." src="assets/images/2.png" class="img-fluid">
                             </div>
-                            <div class="swiper-slide"><img src="assets/images/3.png" class="img-fluid">
+                            <div class="swiper-slide"><img alt="..." src="assets/images/3.png" class="img-fluid">
                             </div>
-                            <div class="swiper-slide"><img src="assets/images/4.png" class="img-fluid">
+                            <div class="swiper-slide"><img alt="..." src="assets/images/4.png" class="img-fluid">
                             </div>
-                            <div class="swiper-slide"><img src="assets/images/5.png" class="img-fluid">
+                            <div class="swiper-slide"><img alt="..." src="assets/images/5.png" class="img-fluid">
                             </div>
-                            <div class="swiper-slide"><img src="assets/images/6.png" class="img-fluid">
+                            <div class="swiper-slide"><img alt="..." src="assets/images/6.png" class="img-fluid">
                             </div>
-                            <div class="swiper-slide"><img src="assets/images/5.png" class="img-fluid">
+                            <div class="swiper-slide"><img alt="..." src="assets/images/5.png" class="img-fluid">
                             </div>
-                            <div class="swiper-slide"><img src="assets/images/6.png" class="img-fluid">
+                            <div class="swiper-slide"><img alt="..." src="assets/images/6.png" class="img-fluid">
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -599,7 +600,7 @@
                     <div class="row justify-content-evenly">
                         <div class="col-lg-auto col-md-12  mb-4">
                             <div class="d-flex align-items-center">
-                                <img style="width: 307px; height:55px ;"
+                                <img style="width: 307px; height:55px ;" alt="..."
                                     src="assets/images/logo-4-removebg-preview.png">
 
                             </div>
