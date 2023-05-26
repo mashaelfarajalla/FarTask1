@@ -9,6 +9,38 @@ html {
     scroll-behavior: smooth;
 }
 
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(225, 225, 225, .2);
+    border-radius: 60px;
+    padding: 10px 20px;
+    /* backdrop-filter: blur(4px) saturate(180%); */
+}
+
+.search-bar input {
+    flex: 1;
+    outline: none;
+    border: 0;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #f1f1f1;
+}
+
+::placeholder {
+    color: #f1f1f1;
+}
+
+.search-bar button {
+    background: transparent;
+    border: 0;
+    color: #f1f1f1;
+}
+
 #progress {
     bottom: 10px;
     right: 10px;
@@ -389,7 +421,7 @@ html {
 }
 
 .section3 .carousel-control-prev {
-    left: 85px;
+    left: 8px;
 }
 
 .section3 .carousel-caption {

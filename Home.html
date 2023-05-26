@@ -53,7 +53,7 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 30px;">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 36px;">
                                     <li class="nav-item">
                                         <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
                                     </li>
@@ -101,14 +101,19 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#"> القيم الجوهرية</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <i class=" fa-solid fa-magnifying-glass"></i>
+                                    <li class="nav-item" style="margin-top: 7px;
+    margin-right: 4px;">
+                                        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <i class=" fa-solid fa-magnifying-glass"
+                                                style="color:  rgba(102, 102, 102, .85) ; font-size: 16px;"></i>
+                                        </a>
                                         <!-- <input class="form-control me-2" type="search" placeholder="Search"
                                             aria-label="Search"> -->
+
                                     </li>
                                 </ul>
                                 <form class="d-flex english">
-                                    <ul>
+                                    <ul class="p-lg-0 m-lg-0  ">
                                         <li class="nav-item" style="list-style: none;">
 
                                             <a href="#" class="nav-link">English</a>
@@ -121,6 +126,28 @@
                             </div>
                         </div>
                     </nav>
+                </div>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content" style="background-color: transparent; border: 0;">
+                            <div class="modal-header" style="border-bottom: 0;">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/search" class="search-bar">
+                                    <input class=" me-2" name="q" type="search" placeholder="بحث ..."
+                                        aria-label="Search">
+                                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
                 <div class="container sectiontitle">
@@ -530,7 +557,7 @@
                     <div class=" row d-flex p-3 links align-items-center">
                         <p class="col-lg-auto">© المؤسسة الفلسطينية لضمان الودائع 2022</p>
 
-                        <div class="col-lg-auto mx-5">
+                        <div class="col-lg-auto mx-0 mx-lg-5">
                             <a class="text-dark mx-2" href=""><i class="fa-brands fa-facebook-f"></i></a>
                             <a class="text-dark mx-2" href=""><i class="fa-brands fa-instagram"></i></a>
                             <a class="text-dark mx-2" href=""><i class="fa-brands fa-twitter"></i></a>
