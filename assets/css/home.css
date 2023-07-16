@@ -642,6 +642,7 @@ html {
     .container-xl,
     .container-xxl {
         /* max-width: 1000px; */
-        max-width: 1675px;
+        /* max-width: 1675px; */
+        max-width: 1810px;
     }
 }
