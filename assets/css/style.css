@@ -1,11 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Noto+Sans+Arabic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
 body {
-    /* background: #E7F2F3; */
-    color: #000000;
-    font-family: 'Cairo';
+    font-family: 'Tajawal';
+    /* font-family: 'Tajawal', sans-serif; */
     font-weight: 400;
+    color: black;
 }
+
+.titlepage {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+
+.page .bg2 nav {
+    background-color: white;
+}
+
+.page .titlepage p,
+.page .titlepage span {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(51, 52, 52, 1);
+
+}
+
+.page .imagessection p {
+    /* font-size: 36px; */
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    color: rgba(9, 67, 139, 1);
+}
+
+.page .imagessection table caption,
+.page .imagessection .title p {
+    color: white;
+    background: linear-gradient(180deg, #09438B 61.74%, rgba(9, 67, 139, 0.71) 161.74%);
+
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+
+/* **********************************************************8 */
+
+.page .card {
+    border: none;
+    height: 100%;
+}
+
+.page .card .card-body {
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: space-between;
+}
+
+.page .card h5 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: rgba(61, 70, 77, 1);
+}
+
+.page .card p {
+    font-size: 29px;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: justified;
+    color: rgba(102, 102, 102, 1);
+}
+
+.page .card .card-body a {
+    color: rgba(9, 67, 139, 1) !important;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.page .card .card-body .date {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(208, 208, 208, 1);
+}
+
+
+
+/* **********************************************************8 */
+
+.page .details p {
+    font-size: 36px;
+    line-height: 55px;
+    letter-spacing: 0em;
+    text-align: justified;
+    color: rgba(102, 102, 102, 1);
+}
+
+/* **********************************************************8 */
+
+
+
 
 .myDiv {
     display: flex;
@@ -38,14 +148,21 @@ tr {
 }
 
 .container .sectiontitle h2 {
-    font-size: 30px;
-    line-height: 56px;
-    color: #3E9BA4;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 0em;
+    color: rgba(51, 52, 52, 1);
 }
 
 
 .container .sectiontitle p {
-    font-size: 17px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 67px;
+    letter-spacing: 0em;
+    color: rgba(102, 102, 102, 1);
+    ;
     text-align: justify;
 }
 
@@ -82,17 +199,21 @@ tr {
 }
 
 .accordion-button {
-    color: #030507;
+    /* color: #030507; */
 
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(43, 141, 148, 0.31774) 0.01%, #2B8D94 30.21%) !important;
-
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(43, 141, 148, 0.31774) 0.01%, #2B8D94 30.21%) !important; */
+    background: linear-gradient(180deg, #09438B 0%, rgba(9, 67, 139, 0.71) 100%);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
     padding: 0.2rem 1.25rem;
     color: #fff !important;
     font-weight: bold !important;
     border-top-left-radius: 7px !important;
     border-top-right-radius: 7px !important;
-    height: 29px;
+    height: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
 }
 
 .accordion-button.collapsed {
@@ -120,7 +241,12 @@ tr {
 }
 
 .lable-title {
-    width: 110px;
+    /* width: 110px; */
+    width: 235px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
 }
 
 
@@ -149,7 +275,7 @@ label:hover .tooltip2 {
     position: relative;
 }
 
-.form-control {
+.pageindex .form-control {
     width: 30%;
     background: #f3f3f3;
     border: 1px solid #bfbfbf;
@@ -183,13 +309,17 @@ label:hover .tooltip2 {
 }
 
 .btn-secondary {
-    color: #000000 !important;
-    background-color: #E9E9E9;
-    border-color: #3C969C;
+    color: white !important;
+    background: rgba(9, 67, 139, 1);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
 }
 
 .btn-secondary:hover {
-    background-color: #d9d8d8;
+    background-color: rgba(9, 68, 139, 0.795);
+    ;
 }
 
 
@@ -247,10 +377,13 @@ footer {
 
 
 .h2swiper {
-    color: #027b87;
+    color: rgba(9, 67, 139, 1);
+    font-size: 48px;
     font-weight: 700;
-    font-size: 1.6em;
-    line-height: 1.3;
+    line-height: 58px;
+    letter-spacing: 0em;
+
+
 }
 
 .swiper-button-prev:after,
@@ -269,11 +402,12 @@ footer h4 {
 }
 
 footer h5 {
-    color: #555;
+    /* color: #555; */
+    color: rgba(104, 104, 104, 1);
+    font-size: 36px;
     font-weight: 700;
-    font-family: "Tajawal", sans-serif;
-    font-size: 1.125em;
-    text-rendering: optimizeSpeed;
+    line-height: 43px;
+    letter-spacing: 0em;
 
 }
 
@@ -285,12 +419,11 @@ footer ul li i {
 }
 
 footer .p p {
-    font-size: 1rem;
-    line-height: .85 !important;
-    ;
-
-    color: #777777;
-    ;
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: right;
+color: rgba(102, 102, 102, 1);    ;
 }
 
 footer .links p {
@@ -309,13 +442,17 @@ footer .links i {
 footer ul li a {
     color: #777777;
     text-decoration: none;
-    font-size: 90%;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: right;
 
 }
 
 
 footer ul li {
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid rgba(208, 208, 208, 1);
     line-height: 36px;
 }
 

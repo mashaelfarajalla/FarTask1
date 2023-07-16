@@ -54,7 +54,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 36px;">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                                        <a class="nav-link active" aria-current="page" href="Home.html">الرئيسية</a>
                                     </li>
 
                                     <li class="nav-item dropdown">
@@ -82,7 +82,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">الاصدارات</a>
+                                        <a class="nav-link" href="versions.html">الاصدارات</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
@@ -323,8 +323,10 @@
 
                                                         <p> استنادا الى القرار بقانون رقم ( ) بتاريخ 2020/09/13 بشأن
                                                             تعديل الفقرة ( 2 ) من أحكام المادة رقم ( 16 )[...]</p>
-                                                        <button type="button" class="btn btn-primary ">المزيد
-                                                        </button>
+                                                        <a href="Categorynewsdetails.html">
+                                                            <button type="button" class="btn btn-primary ">المزيد
+                                                            </button>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -387,8 +389,10 @@
 
                                                         <p> استنادا الى القرار بقانون رقم ( ) بتاريخ 2020/09/13 بشأن
                                                             تعديل الفقرة ( 2 ) من أحكام المادة رقم ( 16 )[...]</p>
-                                                        <button type="button" class="btn btn-primary ">المزيد
-                                                        </button>
+                                                        <a href="Categorynewsdetails.html">
+                                                            <button type="button" class="btn btn-primary ">المزيد
+                                                            </button>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -409,9 +413,12 @@
 
 
                             </div>
-                            <h5 class="mt-3 h5news"> المزيد من اخبار المؤسسة
-                                <i class="fa-solid fa-chevron-left" style="font-size: 15px;"></i>
-                            </h5>
+                            <a href="Categorynews.html" style="text-decoration: none;">
+                                <h5 class="mt-3 h5news"> المزيد من اخبار المؤسسة
+                                    <i class="fa-solid fa-chevron-left" style="font-size: 15px;"></i>
+
+                                </h5>
+                            </a>
                         </div>
 
                     </div>
@@ -661,7 +668,7 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
+    <script src="assets/js/index.js"></script>
 
     <script>
 
@@ -702,46 +709,6 @@
 
 
 
-
-
-
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false
-
-            },
-
-            slidesPerView: 1,
-            spaceBetween: 10,
-            // Responsive breakpoints
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 40
-                },
-                // when window width is >= 480px
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                // when window width is >= 640px
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                },
-                992: {
-                    slidesPerView: 6,
-                    spaceBetween: 5
-                }
-            }
-        });
 
 
 

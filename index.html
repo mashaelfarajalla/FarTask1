@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إحتساب الضمان</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -100,98 +102,137 @@
 <body>
 
 
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white ">
-            <div class="container" style="border-bottom: 1px solid black;">
-                <a class="navbar-brand" href="#"><img style="
-            width: 98px;
-    height: 96px;" alt=".." src="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Home.html">الرئيسية</a>
-                        </li>
+    <div class="pageindex">
+        <div id="progress">
+            <span id="progress-value"><i class="fa-solid fa-angle-up"
+                    style="font-size: 20px; color: #1e1a1a38;"></i></span>
+        </div>
+        <div id="access">
+            <span>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                حول المؤسسة
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                تشريعات
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">الاصدارات</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                ضمان الودائع
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">بيانات واحصائيات</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> القيم الجوهرية</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button> -->
-                    </form>
+                <i class="fa-solid fa-universal-access"></i>
+            </span>
+        </div>
+        <div class="container-fluid page  p-0">
+            <div class="bg2">
+                <div>
+                    <div class="divheader d-none d-lg-block"
+                        style="height: 20px; width: 100%; background: rgba(9, 67, 139, 1)">
+                    </div>
+
+                    <nav class="menuSection fixed-top navbar navbar-expand-lg navbar-light ">
+                        <div class="container" style="border-bottom: 1px solid #e1e1e1ad;
+                    padding-bottom: 4px;
+                    padding-top: 16px;">
+                            <a class="navbar-brand" href="#"><img style="
+                                             width: 56px;
+                                     height: 60px;" alt="iconimg"
+                                    src="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 30px;">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            حول المؤسسة
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">النشأة والرؤية والرسالة</a></li>
+                                            <li><a class="dropdown-item" href="#">أهداف المؤسسة</a></li>
+                                            <li><a class="dropdown-item" href="#">الهيكل التنظيمي</a></li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            تشريعات
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                            <li><a class="dropdown-item" href="#">قوانين</a></li>
+                                            <li><a class="dropdown-item" href="#">تعليمات و تعاميم </a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">الاصدارات</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            ضمان الودائع
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="#">بيانات ضمان الودائع</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">بيانات واحصائيات</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"> القيم الجوهرية</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <i class=" fa-solid fa-magnifying-glass"></i>
+                                        <!-- <input class="form-control me-2" type="search" placeholder="Search"
+                                                            aria-label="Search"> -->
+                                    </li>
+                                </ul>
+                                <form class="d-flex english">
+                                    <ul>
+                                        <li class="nav-item" style="list-style: none;">
+
+                                            <a href="#" class="nav-link">English</a>
+                                        </li>
+                                    </ul>
+                                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                                       <button class="btn btn-outline-success" type="submit">Search</button> -->
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
+
+
+
             </div>
-        </nav>
-        <div class="bg-white">
+        </div>
+        <div class="bg-white" style="    margin-top: 145px;">
             <div class="container ">
+                <div class="row titlepage">
+                    <div class="col-auto">
+                        <p>الإصدارات</p>
+                    </div>
+                    <span class="col-auto"> > </span>
+                    <div class="col-auto">
+                        <p>احتساب الضمان </p>
+                    </div>
+
+                </div>
                 <div class="row bg-white">
                     <div class="col-lg-12" style="    padding: 19px 19px;">
                         <div class="row sectiontitle">
                             <h2>طريقة الاحتساب</h2>
-                            <p>تتيح هذه النافذة إمكانية احتساب الودائع المؤمن عليها لدى البنوك الأعضاء في المؤسسة
-                                الفلسطينية
-                                لضمان الودائع.
-                                قم باختيار أحد هذه البنوك ومن ثم قم بتحديد نوع الحساب: سواء أكان حساب شخصي، حساب شركات،
-                                او
-                                حساب حكومي لدى البنك العضو
-                                ومن ثم طباعة التقرير، أما إذا كان لديك حساب في أكثر من بنك فيمكن الرجوع مرة أخرى واختيار
-                                البنك الاخر واتباع الخطوات
-                                السابقة وهكذا...، وبالتالي يمكنك الحصول على تقرير بمعلومات حول ودائعك في كل بنك على حدا.
+                            <p>
+                                تتيح هذه النافذة إمكانية احتساب الودائع المؤمن عليها لدى البنوك الأعضاء في المؤسسة
+                                الفلسطينية لضمان الودائع. قم باختيار
+                                أحد هذه البنوك ومن ثم قم بتحديد نوع الحساب: سواء أكان حساب شخصي، حساب شركات، او حساب
+                                حكومي لدى البنك العضو ومن ثم طباعة
+                                التقرير، أما إذا كان لديك حساب في أكثر من بنك فيمكن الرجوع مرة أخرى واختيار البنك الاخر
+                                واتباع الخطوات السابقة وهكذا...،
+                                وبالتالي يمكنك الحصول على تقرير بمعلومات حول ودائعك في كل بنك على حدا.
+
                             </p>
                         </div>
                         <div class="row section2">
@@ -220,9 +261,9 @@
                                                     </select>
                                                 </div>
                                                 <div class="row align-items-center my-3">
-                                                    <label class="lable-title"> وصف حساب</label>
+                                                    <label class="col-auto lable-title"> وصف حساب</label>
 
-                                                    <div class="row d-flex justify-content-evenly">
+                                                    <div class="col d-flex ">
                                                         <div class="col-md-6 col-lg-auto form-check postion">
                                                             <input class="form-check-input" type="radio"
                                                                 name="flexRadioDefault" id="flexRadioDefault1"
@@ -600,7 +641,7 @@
                     <div class="row justify-content-evenly">
                         <div class="col-lg-auto col-md-12  mb-4">
                             <div class="d-flex align-items-center">
-                                <img style="width: 307px; height:55px ;" alt="..."
+                                <img style="width: 362px;height: 75px;" alt="..."
                                     src="assets/images/logo-4-removebg-preview.png">
 
                             </div>
