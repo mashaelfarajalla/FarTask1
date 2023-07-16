@@ -182,11 +182,12 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#"> القيم الجوهرية</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <i class=" fa-solid fa-magnifying-glass"></i>
-                                        <!-- <input class="form-control me-2" type="search" placeholder="Search"
-                                                            aria-label="Search"> -->
-                                    </li>
+                                <li class="nav-item" style="margin-top: 7px; margin-right: 4px;">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class=" fa-solid fa-magnifying-glass" style="color:  rgba(102, 102, 102, .85) ; font-size: 16px;"></i>
+                                    </a>
+                                
+                                </li>
                                 </ul>
                                 <form class="d-flex english">
                                     <ul>
@@ -203,7 +204,23 @@
                         </div>
                     </nav>
                 </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: transparent; border: 0;">
+            <div class="modal-header" style="border-bottom: 0;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/search" class="search-bar">
+                    <input class=" me-2" name="q" type="search" placeholder="بحث ..." aria-label="Search">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
 
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
             </div>
@@ -895,46 +912,7 @@
         }
 
 
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false
-
-            },
-
-            slidesPerView: 1,
-            spaceBetween: 10,
-            // Responsive breakpoints
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 40
-                },
-                // when window width is >= 480px
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                // when window width is >= 640px
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                },
-                992: {
-                    slidesPerView: 6,
-                    spaceBetween: 5
-                }
-            }
-        });
-
-
-
+       
 
         const input2 = document.getElementById('input2');
         const input3 = document.getElementById('input3');
@@ -1256,6 +1234,7 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/index.js"></script>
 
 
 </body>

@@ -571,7 +571,11 @@ html {
     .menuSection.scrolled {
         background-color: white;
         box-shadow: 3px 4px 3px #d1d1d1a6;
+        top: 0px
     }
+ .fixed-top {
+     top: 0 !important;
+ }
 
     .menuSection .container {
         border-bottom: 0 !important;
@@ -582,6 +586,10 @@ html {
     .menuSection {
         background-color: white;
         box-shadow: 3px 4px 3px #d1d1d1a6;
+        top: 0px
+    }
+    .fixed-top{
+        top: 0 !important;
     }
 
     .menuSection .container {

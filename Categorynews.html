@@ -13,7 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-        <link rel="icon" href="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png">
+    <link rel="icon" href="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png">
 </head>
 
 <body>
@@ -99,10 +99,12 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#"> القيم الجوهرية</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <i class=" fa-solid fa-magnifying-glass"></i>
-                                        <!-- <input class="form-control me-2" type="search" placeholder="Search"
-                                                        aria-label="Search"> -->
+                                    <li class="nav-item" style="margin-top: 7px; margin-right: 4px;">
+                                        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <i class=" fa-solid fa-magnifying-glass"
+                                                style="color:  rgba(102, 102, 102, .85) ; font-size: 16px;"></i>
+                                        </a>
+
                                     </li>
                                 </ul>
                                 <form class="d-flex english">
@@ -120,7 +122,26 @@
                         </div>
                     </nav>
                 </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content" style="background-color: transparent; border: 0;">
+                            <div class="modal-header" style="border-bottom: 0;">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/search" class="search-bar">
+                                    <input class=" me-2" name="q" type="search" placeholder="بحث ..."
+                                        aria-label="Search">
+                                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
 
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -136,7 +157,7 @@
 
                 </div>
                 <div class="row ">
-                    <div class="col-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <img src="assets/images/62808e5dbade1-300x200.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -146,92 +167,100 @@
                                     الودائع خلفاً للسيد زاهر هموز.[...]</p>
                                 <div class="row justify-content-between">
                                     <div class="col-auto date">
-                                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.09299 8.40399H18.917" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M14.443 12.31H14.452" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.005 12.31H10.014" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M5.55801 12.31H5.56701" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M14.443 16.196H14.452" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.005 16.196H10.014" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M5.55801 16.196H5.56701" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M14.044 1V4.291" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M5.965 1V4.291" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                stroke-linejoin="round" />
+                                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.09299 8.40399H18.917" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.443 12.31H14.452" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10.005 12.31H10.014" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.55801 12.31H5.56701" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.443 16.196H14.452" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10.005 16.196H10.014" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.55801 16.196H5.56701" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.044 1V4.291" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.965 1V4.291" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                             <path
                                                 d="M14.238 2.57898H5.771C2.834 2.57898 1 4.21498 1 7.22198V16.272C1 19.326 2.834 21 5.771 21H14.229C17.175 21 19 19.355 19 16.348V7.22198C19.009 4.21498 17.184 2.57898 14.238 2.57898Z"
-                                                stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                        
+
                                         27 سبتمبر 2022
                                     </div>
-                                    <a href="#" class="col-auto"> 
-                                        اقرأ المزيد 
-                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L7 7L13 1" stroke="#09438B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
+                                    <a href="#" class="col-auto">
+                                        اقرأ المزيد
+                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L7 7L13 1" stroke="#09438B" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
                                     </a>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-<div class="col-3">
-    <div class="card">
-        <img src="assets/images/closeup-shot-several-newspapers-stacked-top-each-other-min-300x200.png" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title ">تخفيض الحد الأدنى لرسوم الاشتراك
-            </h5>
-            <p class="card-text ">  
-                    استنادا الى القرار بقانون رقم ( ) بتاريخ 2020/09/13 بشأن تعديل الفقرة ( 2 ) من أحكام المادة رقم ( 16 )[...]</p>
-            <div class="row justify-content-between">
-                <div class="col-auto date">
-                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.09299 8.40399H18.917" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M14.443 12.31H14.452" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10.005 12.31H10.014" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M5.55801 12.31H5.56701" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M14.443 16.196H14.452" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10.005 16.196H10.014" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M5.55801 16.196H5.56701" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M14.044 1V4.291" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M5.965 1V4.291" stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M14.238 2.57898H5.771C2.834 2.57898 1 4.21498 1 7.22198V16.272C1 19.326 2.834 21 5.771 21H14.229C17.175 21 19 19.355 19 16.348V7.22198C19.009 4.21498 17.184 2.57898 14.238 2.57898Z"
-                            stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="assets/images/closeup-shot-several-newspapers-stacked-top-each-other-min-300x200.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title ">تخفيض الحد الأدنى لرسوم الاشتراك
+                                </h5>
+                                <p class="card-text ">
+                                    استنادا الى القرار بقانون رقم ( ) بتاريخ 2020/09/13 بشأن تعديل الفقرة ( 2 ) من أحكام
+                                    المادة رقم ( 16 )[...]</p>
+                                <div class="row justify-content-between">
+                                    <div class="col-auto date">
+                                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.09299 8.40399H18.917" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.443 12.31H14.452" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10.005 12.31H10.014" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.55801 12.31H5.56701" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.443 16.196H14.452" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10.005 16.196H10.014" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.55801 16.196H5.56701" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.044 1V4.291" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.965 1V4.291" stroke="#D0D0D0" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M14.238 2.57898H5.771C2.834 2.57898 1 4.21498 1 7.22198V16.272C1 19.326 2.834 21 5.771 21H14.229C17.175 21 19 19.355 19 16.348V7.22198C19.009 4.21498 17.184 2.57898 14.238 2.57898Z"
+                                                stroke="#D0D0D0" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
 
-                    27 سبتمبر 2022
-                </div>
-                <a href="#" class="col-auto">
-                    اقرأ المزيد
-                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L7 7L13 1" stroke="#09438B" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
+                                        27 سبتمبر 2022
+                                    </div>
+                                    <a href="#" class="col-auto">
+                                        اقرأ المزيد
+                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L7 7L13 1" stroke="#09438B" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
 
-            </div>
-        </div>
-    </div>
-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -411,7 +440,7 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/index.js"></script>
 
 

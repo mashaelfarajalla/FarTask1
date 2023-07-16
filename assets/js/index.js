@@ -1,3 +1,13 @@
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 50) {
+      $(".menuSection").addClass("scrolled");
+    } else {
+      $(".menuSection").removeClass("scrolled");
+    }
+  });
+});
+
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   navigation: {

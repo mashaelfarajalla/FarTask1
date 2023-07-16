@@ -99,10 +99,11 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#"> القيم الجوهرية</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <i class=" fa-solid fa-magnifying-glass"></i>
-                                        <!-- <input class="form-control me-2" type="search" placeholder="Search"
-                                                        aria-label="Search"> -->
+                                    <li class="nav-item" style="margin-top: 7px; margin-right: 4px;">
+                                        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <i class=" fa-solid fa-magnifying-glass" style="color:  rgba(102, 102, 102, .85) ; font-size: 16px;"></i>
+                                        </a>
+                                    
                                     </li>
                                 </ul>
                                 <form class="d-flex english">
@@ -121,6 +122,23 @@
                     </nav>
                 </div>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: transparent; border: 0;">
+            <div class="modal-header" style="border-bottom: 0;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/search" class="search-bar">
+                    <input class=" me-2" name="q" type="search" placeholder="بحث ..." aria-label="Search">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
             </div>
