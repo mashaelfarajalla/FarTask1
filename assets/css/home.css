@@ -138,8 +138,8 @@ html {
 }
 
 
-.BG1 nav ul li a ,
-.page nav ul li a{
+.BG1 nav ul li a,
+.page nav ul li a {
     color: rgba(102, 102, 102, 1) !important;
     line-height: 29px;
     font-size: 24px;
@@ -149,15 +149,15 @@ html {
 
 }
 
-.BG1 nav ul li a.active ,
-.page nav ul li a.active{
+.BG1 nav ul li a.active,
+.page nav ul li a.active {
     color: rgba(51, 52, 52, 1) !important;
 
 
 }
 
-.BG1 nav ul li.nav-item ,
-.page nav ul li.nav-item{
+.BG1 nav ul li.nav-item,
+.page nav ul li.nav-item {
     position: relative;
 }
 
@@ -175,7 +175,7 @@ html {
 } */
 
 
-.BG1 nav .navbar-nav li.nav-item::after ,
+.BG1 nav .navbar-nav li.nav-item::after,
 .page nav .navbar-nav li.nav-item::after {
     content: "";
     position: absolute;
@@ -190,13 +190,13 @@ html {
 
 
 
-.BG1 nav ul li.nav-item:hover::after ,
+.BG1 nav ul li.nav-item:hover::after,
 .page nav ul li.nav-item:hover::after {
     transform: scaleX(1);
 }
 
-.BG1 nav ul .dropdown-menu  , 
-.page nav ul .dropdown-menu{
+.BG1 nav ul .dropdown-menu,
+.page nav ul .dropdown-menu {
     border: 2px solid #ddd;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .15);
     min-width: 260px;
@@ -215,7 +215,8 @@ html {
     right: -30%;
 }
 
-.BG1 nav .english li a ,.page nav .english li a {
+.BG1 nav .english li a,
+.page nav .english li a {
 
     text-transform: uppercase;
     font-size: 24px;
@@ -229,7 +230,8 @@ html {
     ;
 }
 
-.BG1 nav .english , .page nav .english {
+.BG1 nav .english,
+.page nav .english {
     position: relative;
 }
 
@@ -263,7 +265,8 @@ html {
 }
 
 
-.BG1 nav ul.dropdown-menu::after , .page  nav ul.dropdown-menu::after {
+.BG1 nav ul.dropdown-menu::after,
+.page nav ul.dropdown-menu::after {
     content: "";
     position: absolute;
     top: -8px;
@@ -277,19 +280,23 @@ html {
     /* background-color: #03114c; */
 }
 
-.BG1 nav ul .dropdown-menu a , .page  nav ul .dropdown-menu a{
+.BG1 nav ul .dropdown-menu a,
+.page nav ul .dropdown-menu a {
     color: rgb(154 154 154 / 85%);
 }
 
-.BG1 nav ul .dropdown:hover .dropdown-menu  , .page nav ul .dropdown:hover .dropdown-menu{
+.BG1 nav ul .dropdown:hover .dropdown-menu,
+.page nav ul .dropdown:hover .dropdown-menu {
     display: block
 }
 
-.BG1 nav ul li .dropdown-menu li a , .page nav ul li .dropdown-menu li a{
+.BG1 nav ul li .dropdown-menu li a,
+.page nav ul li .dropdown-menu li a {
     line-height: 32px;
 }
 
-.BG1 nav ul li .dropdown-menu li a:hover , .page nav ul li .dropdown-menu li a:hover {
+.BG1 nav ul li .dropdown-menu li a:hover,
+.page nav ul li .dropdown-menu li a:hover {
     background-color: rgba(234, 234, 234, 0.472);
 }
 
@@ -472,7 +479,7 @@ html {
 }
 
 .section3 .carousel-caption {
-    right: 0px;
+    right: 3px;
     bottom: 0rem;
     left: 0px;
     width: fit-content;
@@ -541,12 +548,12 @@ html {
     text-align: justified;
 }
 
-.section3 .h5news{
+.section3 .h5news {
     color: rgba(9, 67, 139, 1);
-        font-size: 24px;
-        line-height: 29px;
-        letter-spacing: 0em;
-        font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0em;
+    font-weight: 700;
 }
 
 .section3 .h5news:hover {
@@ -561,7 +568,12 @@ html {
         background-color: #ffffffd9;
         height: 66px !important;
         box-shadow: 3px 4px 3px #d1d1d1a6;
-                top: 0px
+        top: 0px
+    }
+
+    .section3 .imagebook img {
+        width: 385px !important;
+        height: 385px !important;
     }
 }
 
@@ -573,22 +585,45 @@ html {
         box-shadow: 3px 4px 3px #d1d1d1a6;
         top: 0px
     }
- .fixed-top {
-     top: 0 !important;
- }
+
+    .fixed-top {
+        top: 0 !important;
+    }
 
     .menuSection .container {
         border-bottom: 0 !important;
     }
+
+    .section3 .imagebook img {
+        width: 264px !important;
+        height: 264px !important;
+    }
+
+    .section3 h4::before {
+        width: 97% !important;
+    }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .section3 .imagebook img {
+        width: 280px !important;
+        height: 280px !important;
+    }
+
+    .section3 .bgdiv {
+        padding: 5% !important;
+    }
+
     .menuSection {
         background-color: white;
         box-shadow: 3px 4px 3px #d1d1d1a6;
         top: 0px
     }
-    .fixed-top{
+
+    .fixed-top {
         top: 0 !important;
     }
 
