@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
 body {
     font-family: 'Tajawal';
@@ -113,41 +115,82 @@ body {
 }
 
 /* **********************************************************8 */
+.page .tablepae table thead tr th {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 122px 0 0 0;
+    color: rgba(61, 70, 77, 1);
+}
+
+
+
+.page .tablepae table tbody tr th:first-child {
+    width: 18%;
+    background-color: rgba(224, 234, 246, 1);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: .1px;
+    text-align: right;
+    color: rgba(51, 52, 52, 1);
+}
+
+.page .tablepae table tbody tr td {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 5% 0;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(61, 70, 77, 1);
+}
 
 
 
 
-.myDiv {
+
+
+
+
+/* **********************************************************8 */
+
+
+
+.pageindex .myDiv {
     display: flex;
 }
 
-table td {
+.pageindex table td {
     width: 300px;
 
 }
 
 
-table tfoot td {
+.pageindex table tfoot td {
     font-size: 20px;
     font-weight: bold;
 }
 
-select:disabled {
+.pageindex select:disabled {
     color: -internal-light-dark(graytext, rgb(170, 170, 170));
     opacity: 0.7;
     border-color: rgba(118, 118, 118, 0.3);
 }
 
-tbody,
-td,
-tfoot,
-th,
-thead,
-tr {
+.pageindex tbody,
+.pageindex td,
+.pageindex tfoot,
+.pageindex th,
+.pageindex thead,
+.pageindex tr {
     border-style: none !important;
 }
 
-.container .sectiontitle h2 {
+.pageindex .container .sectiontitle h2 {
     font-size: 48px;
     font-weight: 700;
     line-height: 58px;
@@ -156,7 +199,7 @@ tr {
 }
 
 
-.container .sectiontitle p {
+.pageindex .container .sectiontitle p {
     font-size: 32px;
     font-weight: 500;
     line-height: 67px;
@@ -166,22 +209,22 @@ tr {
     text-align: justify;
 }
 
-.accordion-item {
+.pageindex .accordion-item {
     border: 0;
 }
 
-.divaccordion-body {
+.pageindex .divaccordion-body {
     margin-top: -2px;
     border: 1px solid #aaaaaa69;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
 }
 
-.accordion-button:not(.collapsed)::before {
+.pageindex .accordion-button:not(.collapsed)::before {
     transform: rotate(-90deg);
 }
 
-.accordion-button::before {
+.pageindex .accordion-button::before {
     flex-shrink: 0;
     margin: 0 5px;
     width: 1.25rem;
@@ -193,12 +236,12 @@ tr {
     transition: transform .2s ease-in-out;
 }
 
-.accordion-button::after {
+.pageindex .accordion-button::after {
 
     content: none;
 }
 
-.accordion-button {
+.pageindex .accordion-button {
     /* color: #030507; */
 
     /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(43, 141, 148, 0.31774) 0.01%, #2B8D94 30.21%) !important; */
@@ -216,12 +259,12 @@ tr {
     letter-spacing: 0em;
 }
 
-.accordion-button.collapsed {
+.pageindex .accordion-button.collapsed {
     border-radius: 7px !important;
 
 }
 
-.form-select {
+.pageindex .form-select {
     margin: 0px 15px;
     padding: 0 1.25rem 0 0;
 
@@ -235,12 +278,12 @@ tr {
 }
 
 
-.form-check .form-check-input {
+.pageindex .form-check .form-check-input {
     float: right;
     margin: 4px 10px;
 }
 
-.lable-title {
+.pageindex .lable-title {
     /* width: 110px; */
     width: 235px;
     font-size: 32px;
@@ -251,7 +294,7 @@ tr {
 
 
 
-.tooltip2 {
+.pageindex .tooltip2 {
     width: 330px;
     position: absolute;
     color: rgb(0, 0, 0);
@@ -267,11 +310,11 @@ tr {
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-label:hover .tooltip2 {
+.pageindex label:hover .tooltip2 {
     opacity: 1;
 }
 
-.section2 .postion {
+.pageindex .section2 .postion {
     position: relative;
 }
 
@@ -282,7 +325,7 @@ label:hover .tooltip2 {
     height: 32px;
 }
 
-.form-label {
+.pageindex .form-label {
     width: 120px;
 }
 
@@ -369,8 +412,7 @@ label:hover .tooltip2 {
 }
 
 footer {
-    font-family: "Tajawal", sans-serif;
-    background: #E7F2F3;
+    background:  rgba(224, 234, 246, 1);;
 
 }
 
@@ -490,6 +532,15 @@ footer .list-unstyled {
     .page .details p {
         font-size: 18px;
         line-height: 35px;
+    }
+
+    footer .p p {
+        font-size: 27px !important;
+    }
+
+    .page .imagessection table caption,
+    .page .imagessection .title p {
+        font-size: 24px;
     }
 }
 
