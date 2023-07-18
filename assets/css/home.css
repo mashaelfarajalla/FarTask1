@@ -107,14 +107,33 @@ html {
     height: 46px !important;
 }
 
-.BG1 {
+/* .BG1 {
     background: url("../images/4c37338c-7fbb-4efd-8b3f-8007fcc3bc11.jpg");
 
     background-size: cover;
-    /* background-position: 100% 100%; */
     position: relative;
     height: 100%;
 
+} */
+
+
+
+video {
+    position: relative;
+    height: 878px;
+}
+
+.iconplay {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.titlevideo {
+    position: absolute;
+    bottom: 40px;
+    right: 55px;
 }
 
 .btn-primary {
