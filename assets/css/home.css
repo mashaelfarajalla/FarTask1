@@ -625,7 +625,7 @@ video {
 }
 
 
-.footer .container .row.justify-content-evenly img {
+footer .container .row.justify-content-evenly img {
     width: 362px;
     height: 75px;
 }
@@ -647,6 +647,14 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
     .section3 .imagebook img {
         width: 385px !important;
         height: 385px !important;
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        /* max-width: 1003px; */
+        max-width: 1322px
     }
 }
 
