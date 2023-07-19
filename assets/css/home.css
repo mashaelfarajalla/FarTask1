@@ -117,9 +117,20 @@ html {
     padding-top: 16px;
 }
 
-.menuSection.scrolled .container img {
-    width: 41px !important;
-    height: 46px !important;
+.menuSection.scrolled .container .navbar-brand img {
+    /* width: 41px !important;
+    height: 46px !important; */
+    width: 56px;
+    height: 60px;
+}
+
+.modal .modal-content {
+    background-color: transparent;
+    border: 0;
+}
+
+.modal .modal-header {
+    border-bottom: 0;
 }
 
 /* .BG1 {
