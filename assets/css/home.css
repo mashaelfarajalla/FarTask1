@@ -78,6 +78,11 @@ html {
     pointer-events: auto;
 }
 
+#progress-value i {
+    font-size: 20px;
+    color: #1e1a1a38;
+}
+
 #access {
 
     bottom: 0px;
@@ -96,10 +101,20 @@ html {
     font-size: 45px;
 }
 
+.divheader {
+    height: 20px;
+    width: 100%;
+    background: rgba(9, 67, 139, 1)
+}
 
 
 .menuSection.scrolled .container {
     border: 0 !important;
+}
+
+.menuSection .container:first-child {
+    padding-bottom: 4px;
+    padding-top: 16px;
 }
 
 .menuSection.scrolled .container img {
