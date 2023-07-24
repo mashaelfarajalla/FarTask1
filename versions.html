@@ -35,24 +35,23 @@
                         style="height: 20px; width: 100%; background: rgba(9, 67, 139, 1)">
                     </div>
 
+                <div class="row">
                     <nav class="menuSection fixed-top navbar navbar-expand-lg navbar-light ">
-                        <div class="container" style="border-bottom: 1px solid #e1e1e1ad;
-            padding-bottom: 4px;
-            padding-top: 16px;">
+                        <div class="container">
                             <a class="navbar-brand" href="#"><img alt="iconimg"
                                     src="assets/images/2831ce63-3d9d-4a33-84cb-56278eb5c849-removebg-preview.png"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"   >
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="Home.html">الرئيسية</a>
+                                <ul class="row navbar-nav ms-auto mb-2 mb-lg-0">
+                                    <li class="col-auto nav-item">
+                                        <a class="nav-link" aria-current="page" href="Home.html">الرئيسية</a>
                                     </li>
-
-                                    <li class="nav-item dropdown">
+                
+                                    <li class="col-auto nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             حول المؤسسة
@@ -61,11 +60,11 @@
                                             <li><a class="dropdown-item" href="#">النشأة والرؤية والرسالة</a></li>
                                             <li><a class="dropdown-item" href="#">أهداف المؤسسة</a></li>
                                             <li><a class="dropdown-item" href="#">الهيكل التنظيمي</a></li>
-
-
+                
+                
                                         </ul>
                                     </li>
-                                    <li class="nav-item dropdown">
+                                    <li class="col-auto nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             تشريعات
@@ -73,49 +72,49 @@
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                                             <li><a class="dropdown-item" href="#">قوانين</a></li>
                                             <li><a class="dropdown-item" href="#">تعليمات و تعاميم </a></li>
-
+                
                                         </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="versions.html">الاصدارات</a>
+                                    <li class="col-auto nav-item">
+                                        <a class="nav-link active" href="versions.html">الاصدارات</a>
                                     </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="table.html" id="navbarDropdown2"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <li class="col-auto nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="table.html" id="navbarDropdown2" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
                                             ضمان الودائع
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                                             <li><a class="dropdown-item" href="#">بيانات ضمان الودائع</a></li>
-
+                
                                         </ul>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="col-auto nav-item">
                                         <a class="nav-link" href="#">بيانات واحصائيات</a>
                                     </li>
-                                    <li class="nav-item">
+                                  
+                                    <li class="col-auto nav-item">
                                         <a class="nav-link" href="#"> القيم الجوهرية</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="col-auto nav-item search">
                                         <a data-bs-toggle="modal" data-bs-target="#exampleModal">
                                             <i class=" fa-solid fa-magnifying-glass"></i>
                                         </a>
-
+                
                                     </li>
                                 </ul>
-                                <form class="d-flex english">
-                                    <ul>
+                                <form class=" english">
+                                    <ul class=" my-0">
                                         <li class="nav-item" style="list-style: none;">
-
+                
                                             <a href="#" class="nav-link">English</a>
                                         </li>
                                     </ul>
-                                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                               <button class="btn btn-outline-success" type="submit">Search</button> -->
+                
                                 </form>
                             </div>
                         </div>
                     </nav>
+                </div>
                 </div>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -266,6 +265,30 @@
                                 </div>
                             </form>
 
+                        </div>
+                        <div class="row border accordiontable mt-5">
+                            <div class="accordion p-0" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            أسئلة متكررة
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>من هي المصارف الأعضاء في المؤسسة الفلسطينية لضمان الودائع؟</p>
+                                            <p>ما هي عملات الوديعة التي تضمنها المؤسسة الفلسطينية لضمان الودائع؟</p>
+                                            <p>ما هي أنواع الودائع التي تشملها ضمانة المؤسسة الفلسطينية لضمان الودائع؟
+                                            </p>
+                                            <p>ما سقف تغطية كل مودع؟</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
