@@ -142,6 +142,7 @@ html {
 .menuSection .nav-item.search a i {
     color: rgba(102, 102, 102, .85);
     font-size: 16px;
+    padding: 13px 0;
 }
 
 .modal .modal-content {
@@ -208,13 +209,10 @@ video {
     color: rgba(102, 102, 102, 1) !important;
     line-height: 16px;
     font-size: 1.1em;
-    /* font-size: .8em; */
+    padding: 13px 10px;
     letter-spacing: -0.01em;
     font-weight: 700;
-    /* line-height: 29px;
-    font-size: 21px;
-    letter-spacing: 0em; */
-    /* text-align: left; */
+  
     text-transform: uppercase;
 
 }

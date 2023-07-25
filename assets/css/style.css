@@ -22,13 +22,14 @@ body {
 }
 
 .titlepage,
-.page .titlepage p,
+.page .titlepage a,
 .page .titlepage span {
     /* font-size: 22px;
     line-height: 29px;
     letter-spacing: 0em;
     text-align: left;
     color: rgba(51, 52, 52, 1); */
+    text-decoration: none;
     font-size: 20px;
     color: rgb(124 124 124);
     font-weight: 700;
@@ -76,7 +77,7 @@ body {
 }
 
 .page .card h5 {
-    font-size: 32px;
+    font-size: 23px;
     font-weight: 700;
     line-height: 48px;
     letter-spacing: 0em;
@@ -85,7 +86,7 @@ body {
 }
 
 .page .card p {
-    font-size: 29px;
+    font-size: 24px;
     line-height: 48px;
     letter-spacing: 0em;
     text-align: justified;
@@ -103,7 +104,7 @@ body {
 }
 
 .page .card .card-body .date {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 29px;
     letter-spacing: 0em;
