@@ -134,16 +134,16 @@ html {
     height: 66px;
 }
 
-.menuSection .nav-item.search {
+/* .menuSection .nav-item.search {
     margin-top: 7px;
     margin-right: 4px;
-}
-
-.menuSection .nav-item.search a i {
+} */
+/* 
+.menuSection .nav-item.search a svg {
     color: rgba(102, 102, 102, .85);
     font-size: 16px;
     padding: 13px 0;
-}
+} */
 
 .modal .modal-content {
     background-color: transparent;
@@ -212,7 +212,7 @@ video {
     padding: 13px 10px;
     letter-spacing: -0.01em;
     font-weight: 700;
-  
+
     text-transform: uppercase;
 
 }
@@ -374,6 +374,7 @@ video {
     /* font-family: "Tajawal", sans-serif; */
 }
 
+.BG1 .sectiontitle p,
 .BG1 .sectiontitle h1 {
     font-size: 48px;
     line-height: 58px;
@@ -382,11 +383,11 @@ video {
 
 }
 
-.BG1 .sectiontitle p {
+/* {
     font-size: 48px;
     line-height: 58px;
     letter-spacing: 0em;
-}
+} */
 
 .BG1 .sectiontitle button {
     font-size: .72em;
@@ -424,7 +425,7 @@ video {
 .section3 h2 {
     color: rgba(9, 67, 139, 1);
     /* font-size: 64px; */
-    font-size: 1.6em;
+    font-size: 2.6em;
     line-height: 1.3;
 }
 
@@ -433,6 +434,13 @@ video {
     font-size: 1.25em;
     /* font-size: 32px; */
     Line-height: 38.4px
+}
+
+.section3 .numbers .col-auto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
 }
 
 .section3 h3 span {
@@ -656,7 +664,7 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
 @media screen and (min-width: 992px) {
     .menuSection.scrolled {
         background-color: #ffffffd9;
-        height: 66px !important;
+        height: 80px !important;
         box-shadow: 3px 4px 3px #d1d1d1a6;
         top: 0px
     }
@@ -676,6 +684,11 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
 }
 
 @media screen and (max-width: 767px) {
+
+    .BG1 .sectiontitle p,
+    .BG1 .sectiontitle h1 {
+        font-size: 30px !important;
+    }
 
     .menuSection,
     .menuSection.scrolled {
@@ -705,6 +718,11 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .BG1 .sectiontitle p,
+    .BG1 .sectiontitle h1 {
+        font-size: 40px !important;
+    }
 
     .section3 .imagebook img {
         width: 280px !important;
@@ -741,6 +759,15 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
     .container-xxl {
         /* max-width: 1925px; */
         /* max-width: 1810px; */
-        max-width: 1615px;
+        max-width: 1615px !important;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 900px;
     }
 }
