@@ -230,7 +230,8 @@ video {
 }
 
 
-.BG1 nav ul li.nav-item .active::before {
+.BG1 nav ul li.nav-item .active::before,
+.page nav ul li.nav-item .active::before {
     content: "";
     position: absolute;
     top: 0;
@@ -715,6 +716,11 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
     }
 
 
+
+    footer .container .row.justify-content-evenly img {
+        width: 315px !important;
+        height: 60px !important;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {

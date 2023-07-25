@@ -38,6 +38,13 @@ body {
 
 }
 
+.page .imagessection .btn-warning,
+.page .imagessection .btn-light {
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
 .page .imagessection p {
     /* font-size: 36px; */
     font-size: 25px;
@@ -45,6 +52,7 @@ body {
     line-height: 43px;
     letter-spacing: 0em;
     color: rgba(9, 67, 139, 1);
+    text-align: center;
 }
 
 .page .imagessection table caption,
@@ -564,6 +572,11 @@ footer .list-unstyled {
         width: 55%;
     }
 
+    .pageindex .container .sectiontitle p {
+        font-size: 1em;
+        line-height: 40px;
+    }
+
     .tooltip2 {
         display: none;
     }
@@ -587,6 +600,8 @@ footer .list-unstyled {
     .page .imagessection .title p {
         font-size: 24px;
     }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -602,6 +617,10 @@ footer .list-unstyled {
     footer .p p {
         display: inline-block;
         margin: 0 20px;
+    }
+
+    .pageindex .tooltip2 {
+        right: -42px;
     }
 }
 
