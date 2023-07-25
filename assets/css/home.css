@@ -418,7 +418,8 @@ video {
 
 .boxs .box {
     text-align: center;
-    padding: 40px 50px 40px 50px;
+
+    padding: 66px 84px 66px 84px;
 }
 
 
@@ -765,7 +766,7 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
     .container-xxl {
         /* max-width: 1925px; */
         /* max-width: 1810px; */
-        max-width: 1615px !important;
+        max-width: 1439px !important;
     }
 }
 
