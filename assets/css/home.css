@@ -658,13 +658,13 @@ video {
 }
 
 
-footer .container .row.justify-content-evenly img {
+footer .container .row.justify-content-around img {
     width: 307px;
     height: 47px;
 }
 
-footer .container .row.justify-content-evenly .col-sm-auto a i,
-footer .container .row.justify-content-evenly .col-sm-auto p {
+footer .container .row.justify-content-around .col-sm-auto a i,
+footer .container .row.justify-content-around .col-sm-auto p {
     color: #027b87;
 }
 
@@ -724,7 +724,7 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
 
 
 
-    footer .container .row.justify-content-evenly img {
+    footer .container .row.justify-content-around img {
         width: 315px !important;
         height: 60px !important;
     }
