@@ -7,6 +7,19 @@ body {
     font-weight: 700;
 }
 
+/* body .uwy.userway_p1 .uai {
+    top: auto !important;
+    right: auto !important;
+    bottom: 0 !important;
+    left: 53px !important;
+    transform: translate(-100%);
+}
+
+.uwaw {
+    right: auto !important;
+    left: 0 !important
+} */
+
 html {
     scroll-behavior: smooth;
 }
@@ -83,23 +96,9 @@ html {
     color: #1e1a1a38;
 }
 
-#access {
 
-    bottom: 0px;
-    left: 10px;
-    z-index: 2;
-    font-size: 40px;
-    position: fixed;
-    cursor: pointer;
-}
 
-#access span i {
-    color: #03114c;
-}
 
-#access:hover i {
-    font-size: 45px;
-}
 
 .divheader {
     height: 20px;
@@ -569,7 +568,7 @@ video {
 
 
 .section3 .carousel-control-prev {
-    left: 8px;
+    left: -45px;
 }
 
 .section3 .carousel-caption {
@@ -660,8 +659,8 @@ video {
 
 
 footer .container .row.justify-content-evenly img {
-    width: 352px;
-    height: 62px;
+    width: 307px;
+    height: 47px;
 }
 
 footer .container .row.justify-content-evenly .col-sm-auto a i,
@@ -679,8 +678,8 @@ footer .container .row.justify-content-evenly .col-sm-auto p {
     }
 
     .section3 .imagebook img {
-        width: 385px !important;
-        height: 385px !important;
+        width: 255px !important;
+        height: 255px !important;
     }
 
     .container,

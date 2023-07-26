@@ -156,8 +156,8 @@ body {
 .page .tablepae table tbody tr th:first-child {
     width: 18%;
     background-color: rgba(224, 234, 246, 1);
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 700;
     line-height: 31px;
     letter-spacing: .1px;
     text-align: right;
@@ -165,10 +165,10 @@ body {
 }
 
 .page .tablepae table tbody tr td {
-    font-size: 24px;
+    font-size: 19px;
     font-weight: 500;
     padding: 5% 0;
-    line-height: 31px;
+    line-height: 60px;
     letter-spacing: 0em;
     text-align: center;
     color: rgba(61, 70, 77, 1);
@@ -501,10 +501,10 @@ footer h4 {
 }
 
 footer h5 {
-    /* color: #555; */
-    color: rgba(104, 104, 104, 1);
+    color: #555;
+    /* color: rgba(104, 104, 104, 1); */
     /* font-size: 36px; */
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: 700;
     line-height: 43px;
     letter-spacing: 0em;
@@ -519,12 +519,12 @@ footer ul li i {
 }
 
 footer .p p {
-    font-size: 1.1rem;
-    line-height: 38px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 30px;
     letter-spacing: 0em;
     text-align: right;
-    color: rgba(102, 102, 102, 1);
-    ;
+    color: rgb(140 140 140);
 }
 
 footer .links p {
