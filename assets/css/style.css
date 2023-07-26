@@ -47,7 +47,7 @@ body {
 
 .page .imagessection p {
     /* font-size: 36px; */
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 43px;
     letter-spacing: 0em;
@@ -61,13 +61,17 @@ body {
     color: white;
     background: linear-gradient(180deg, #09438B 61.74%, rgba(9, 67, 139, 0.71) 161.74%);
     padding: 10px 10px;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 38px;
     letter-spacing: 0em;
     text-align: start;
 }
 
+
+.page .imagessection img {
+    width: 100% !important;
+}
 
 /* **********************************************************8 */
 
@@ -85,17 +89,17 @@ body {
 }
 
 .page .card h5 {
-    font-size: 23px;
+    font-size: 17px;
     font-weight: 700;
-    line-height: 48px;
+    line-height: 33px;
     letter-spacing: 0em;
     text-align: right;
     color: rgba(61, 70, 77, 1);
 }
 
 .page .card p {
-    font-size: 24px;
-    line-height: 48px;
+    font-size: 16px;
+    line-height: 35px;
     letter-spacing: 0em;
     text-align: justified;
     color: rgba(102, 102, 102, 1);
@@ -104,7 +108,7 @@ body {
 .page .card .card-body a {
     color: rgba(9, 67, 139, 1) !important;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 13px;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0em;
@@ -112,7 +116,7 @@ body {
 }
 
 .page .card .card-body .date {
-    font-size: 20px;
+    font-size: 13px;
     font-weight: 700;
     line-height: 29px;
     letter-spacing: 0em;
@@ -126,8 +130,10 @@ body {
 
 .page .details p {
     /* font-size: 40px; */
-    font-size: 1.6em;
-    line-height: 55px;
+    /* font-size: 1.6em;
+    line-height: 55px; */
+    font-size: 1.3em;
+    line-height: 44px;
     letter-spacing: 0em;
     text-align: justified;
     color: rgba(102, 102, 102, 1);
@@ -196,7 +202,7 @@ body {
 }
 
 .accordiontable .accordion .accordion-item .accordion-collapse .accordion-body p {
-    font-size: 19px;
+    font-size: 15px;
     padding: 1rem 1.25rem;
     background: rgba(245, 245, 245, 1);
     line-height: 29px;
@@ -600,6 +606,8 @@ footer .list-unstyled {
     .page .imagessection .title p {
         font-size: 24px;
     }
+
+
 
 
 }
