@@ -183,28 +183,85 @@
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف
                                             الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة</th>
-                                        <th scope="col"><button type="button" class="btn btn-primary">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path
-                                                        d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M11.6406 9.44104V16.014" stroke="white" stroke-width="1.5"
-                                                        stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                أرفق السيرة
-                                                الذاتية
+                                        <th scope="col">
+                                            <div class="input">
+                                                <input type="file" id="drop_zone" class="FileUpload"
+                                                    accept=".jpg,.png,.gif" onchange="handleFileSelect(this) " />
+                                                <div class="dropZoneOverlay">
+                                                    <p class="my-auto">
+                                                        <span><svg width="24" height="24" viewBox="0 0 24 24"
+                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path d="M11.6406 9.44104V16.014" stroke="white"
+                                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg> </span>
+                                                        أرفق السيرة
+                                                        الذاتية
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </th>
 
-                                            </button>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">
+                                            <p class="jobtitle">اسم الوظيفة اسم الوظيفة اسم الوظيفة
+                                            </p>
+                                            <p class="jobaddress"> مكان الوظيفة </p>
+                                            <p class="jobdate">تاريخ النشر</p>
+                                        </th>
+                                        <th scope="col">
+                                            وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف
+                                            الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة
+                                            وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة</th>
+                                        <th scope="col">
+                                            <div class="input">
+                                                <input type="file" id="drop_zone" class="FileUpload"
+                                                    accept=".jpg,.png,.gif" onchange="handleFileSelect(this) " />
+                                                <div class="dropZoneOverlay">
+                                                    <p class="my-auto">
+                                                        <span><svg width="24" height="24" viewBox="0 0 24 24"
+                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path d="M11.6406 9.44104V16.014" stroke="white"
+                                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg> </span>
+                                                        أرفق السيرة
+                                                        الذاتية
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </th>
 
 
@@ -220,28 +277,41 @@
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف
                                             الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة</th>
-                                        <th scope="col"><button type="button" class="btn btn-primary">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path
-                                                        d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path d="M11.6406 9.44104V16.014" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909" stroke="white" stroke-width="1.5"
-                                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                أرفق السيرة
-                                                الذاتية
-                                    
-                                            </button>
+                                        <th scope="col">
+                                            <div class="input">
+                                                <input type="file" id="drop_zone" class="FileUpload"
+                                                    accept=".jpg,.png,.gif" onchange="handleFileSelect(this) " />
+                                                <div class="dropZoneOverlay">
+                                                    <p class="my-auto">
+                                                        <span><svg width="24" height="24" viewBox="0 0 24 24"
+                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path d="M11.6406 9.44104V16.014" stroke="white"
+                                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg> </span>
+                                                        أرفق السيرة
+                                                        الذاتية
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </th>
-                                    
-                                    
+
+
                                     </tr>
                                     <tr>
                                         <th scope="col">
@@ -254,28 +324,41 @@
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف
                                             الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة</th>
-                                        <th scope="col"><button type="button" class="btn btn-primary">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path
-                                                        d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path d="M11.6406 9.44104V16.014" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909" stroke="white" stroke-width="1.5"
-                                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                أرفق السيرة
-                                                الذاتية
-                                    
-                                            </button>
+                                        <th scope="col">
+                                            <div class="input">
+                                                <input type="file" id="drop_zone" class="FileUpload"
+                                                    accept=".jpg,.png,.gif" onchange="handleFileSelect(this) " />
+                                                <div class="dropZoneOverlay">
+                                                    <p class="my-auto">
+                                                        <span><svg width="24" height="24" viewBox="0 0 24 24"
+                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path d="M11.6406 9.44104V16.014" stroke="white"
+                                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg> </span>
+                                                        أرفق السيرة
+                                                        الذاتية
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </th>
-                                    
-                                    
+
+
                                     </tr>
                                     <tr>
                                         <th scope="col">
@@ -288,28 +371,42 @@
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف
                                             الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة</th>
-                                        <th scope="col"><button type="button" class="btn btn-primary">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path
-                                                        d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path d="M11.6406 9.44104V16.014" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909" stroke="white" stroke-width="1.5"
-                                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                أرفق السيرة
-                                                الذاتية
-                                    
-                                            </button>
+                                        <th scope="col">
+
+                                            <div class="input">
+                                                <input type="file" id="drop_zone" class="FileUpload"
+                                                    accept=".jpg,.png,.gif" onchange="handleFileSelect(this) " />
+                                                <div class="dropZoneOverlay">
+                                                    <p class="my-auto">
+                                                        <span><svg width="24" height="24" viewBox="0 0 24 24"
+                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path d="M11.6406 9.44104V16.014" stroke="white"
+                                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg> </span>
+                                                        أرفق السيرة
+                                                        الذاتية
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </th>
-                                    
-                                    
+
+
                                     </tr>
                                     <tr>
                                         <th scope="col">
@@ -322,62 +419,42 @@
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف
                                             الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة
                                             وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة</th>
-                                        <th scope="col"><button type="button" class="btn btn-primary">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path
-                                                        d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path d="M11.6406 9.44104V16.014" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909" stroke="white" stroke-width="1.5"
-                                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                أرفق السيرة
-                                                الذاتية
-                                    
-                                            </button>
-                                        </th>
-                                    
-                                    
-                                    </tr>
-                                    <tr>
                                         <th scope="col">
-                                            <p class="jobtitle">اسم الوظيفة اسم الوظيفة اسم الوظيفة
-                                            </p>
-                                            <p class="jobaddress"> مكان الوظيفة </p>
-                                            <p class="jobdate">تاريخ النشر</p>
+                                            <div class="input">
+                                                <input type="file" id="drop_zone" class="FileUpload"
+                                                    accept=".jpg,.png,.gif" onchange="handleFileSelect(this) " />
+                                                <div class="dropZoneOverlay">
+                                                    <p class="my-auto">
+                                                        <span><svg width="24" height="24" viewBox="0 0 24 24"
+                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path d="M11.6406 9.44104V16.014" stroke="white"
+                                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-miterlimit="10" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg> </span>
+                                                        أرفق السيرة
+                                                        الذاتية
+                                                    </p>
+                                                </div>
+                                            </div>
+
                                         </th>
-                                        <th scope="col">
-                                            وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف
-                                            الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة
-                                            وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة وصف الوظيفة</th>
-                                        <th scope="col"><button type="button" class="btn btn-primary">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M14.7359 2.76199H8.08389C7.08391 2.75804 6.12226 3.14637 5.40541 3.84358C4.68857 4.54079 4.2737 5.49129 4.24989 6.49099V17.228C4.23904 17.7369 4.3304 18.2429 4.51857 18.7159C4.70673 19.1889 4.98788 19.6194 5.34537 19.9818C5.70285 20.3442 6.12941 20.6313 6.5998 20.8259C7.07018 21.0206 7.57484 21.1189 8.08389 21.115H16.0719C17.077 21.0794 18.0287 20.6536 18.7251 19.9279C19.4215 19.2022 19.8077 18.2337 19.8019 17.228V8.03799L14.7359 2.76199Z"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path
-                                                        d="M14.4736 2.75V5.659C14.4736 6.34089 14.7441 6.99495 15.2257 7.47768C15.7073 7.96042 16.3607 8.23241 17.0426 8.234C18.3586 8.234 19.7056 8.234 19.7966 8.234"
-                                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path d="M11.6406 9.44104V16.014" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M8.80176 12.2909L11.6398 9.43994L14.4788 12.2909" stroke="white" stroke-width="1.5"
-                                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                أرفق السيرة
-                                                الذاتية
-                                    
-                                            </button>
-                                        </th>
-                                    
-                                    
+
+
                                     </tr>
                                 </tbody>
                             </table>
