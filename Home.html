@@ -229,11 +229,11 @@
             </div>
         </div>
 
-        <div class="bg-white" id="countersection">
+        <div class="bg-white">
             <div class="container section3 my-5 countersection">
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
-                        <div class="row mt-5 numbers">
+                        <div class="row mt-5 numbers" id="countersection">
                             <h2 class="">المؤسسة في أرقام
                             </h2>
                             <div class="row">
@@ -627,6 +627,11 @@
                                         <i class="fa-solid fa-chevron-right"></i>
                                         بينات الحسابات القومية</a>
                                 </li>
+                                <li class="mb-1">
+                                    <a href="Jobs.html">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                        وظائف</a>
+                                </li>
 
                             </ul>
                         </div>
@@ -703,46 +708,46 @@
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        let section = document.querySelector('.countersection');
+        let section = document.getElementById('countersection');
         let counter = document.querySelectorAll('.number');
 
         let start = false;
 
-        window.onscroll = function () {
-            if (window.scrollY >= section.offsetTop) {
-                if (!start) {
-                    counter.forEach(element => StartCounters(element));
-                }
-                start = true;
 
+        window.addEventListener("scroll", () => {
+
+            if (pageYOffset > section.offsetTop - section.offsetHeight - 0 && start === false) {
+                console.log("true")
+                counter.forEach(x => {
+                    x.innerHTML = 0;
+                    let count = 0
+
+
+                    function updateCount() {
+                        const target = parseInt(x.getAttribute('data-max'));
+                        if (count < target) {
+                            count++;
+                            x.innerHTML = count;
+                            setTimeout(updateCount, 100);
+
+                        }
+                        else {
+                            counter.innerHTML = target
+                        }
+                    }
+                    updateCount();
+                    start = true
+
+                });
             }
-        }
+            else if (pageYOffset < section.offsetTop - section.offsetHeight - 500 || pageYOffset === 0 && start === true) {
+                counter.forEach(x => {
+                    x.innerHTML = 0;
+                });
+                start = false
+            }
+        })
 
-        function StartCounters(el) {
-            console.log(el.getAttribute('data-max'));
-
-            let max = el.getAttribute('data-max');
-            let count = setInterval(() => {
-                el.textContent++;
-                if (el.textContent == max) {
-                    clearInterval(count)
-                }
-            }, 1000 / counter)
-        }
 
 
     </script>
